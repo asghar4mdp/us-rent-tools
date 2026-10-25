@@ -1,0 +1,26 @@
+name: Extract updated site
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract-site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract site zip and commit
+        run: |
+          if [ ! -f rent-tools-site-publish.zip ]; then echo "No zip to extract"; exit 0; fi
+          unzip -o rent-tools-site-publish.zip -d extracted
+          cp -r extracted/rent-tools-site/. .
+          rm -rf extracted rent-tools-site-publish.zip .github
+          git config user.name "asghar4mdp"
+          git config user.email "asghar4mdp@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "US theme, Free Tools hub, About after Home, and 3 new guides" || echo "Nothing to commit"
+          git push
