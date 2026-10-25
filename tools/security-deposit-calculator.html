@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Deposit Calculator — California &amp; Texas | US Rent Tools</title>
+<meta name="description" content="Check a security deposit against the verified California and Texas rules: California maximum, Texas no statutory cap, return deadlines, and refund after itemised deductions. All other states: check the official source.">
+<link rel="canonical" href="https://www.example.com/tools/security-deposit-calculator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Security Deposit Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Checks a security deposit against the verified California and Texas rules, computes return deadlines and refund after itemised deductions.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the California security deposit maximum?","acceptedAnswer":{"@type":"Answer","text":"Generally one month's rent under AB 12 (Civil Code 1950.5), with a narrow small-landlord exception up to two months. The deposit must generally be returned within 21 calendar days after vacating."}},{"@type":"Question","name":"Does Texas cap security deposits?","acceptedAnswer":{"@type":"Answer","text":"Texas has no statutory cap; the lease amount controls. The return period is 30 days, and the landlord's duty is not triggered until the tenant provides a written forwarding address."}},{"@type":"Question","name":"Does this calculator compute interest on a deposit?","acceptedAnswer":{"@type":"Answer","text":"No. No interest calculation is included, because no interest rule is in the verified list for this tool."}}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Security Deposit Calculator", "step": [{"@type": "HowToStep", "name": "Select the state", "text": "Select California or Texas; every other state returns Check official source."}, {"@type": "HowToStep", "name": "Enter rent, deposit charged, and deductions", "text": "Enter the monthly rent, the deposit charged, and any deductions claimed."}, {"@type": "HowToStep", "name": "Enter the move-out and forwarding dates", "text": "Enter the move-out date, and for Texas the written forwarding-address date."}, {"@type": "HowToStep", "name": "Check the maximum, overcharge, and deadline", "text": "Read the maximum deposit, any overcharge, the return deadline, and the refund after deductions."}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation">
+<a href="../index.html">Home</a>
+<a href="prorated-rent-calculator.html">Prorated Rent</a>
+<a href="rent-increase-cap-checker.html">Rent Cap</a>
+<a href="security-deposit-calculator.html" aria-current="page">Deposit</a>
+<a href="late-fee-checker.html">Late Fee</a>
+<a href="move-in-cost-calculator.html">Move-in Cost</a>
+<a href="lease-renewal-comparator.html">Renewal</a>
+<a href="../guides/rent-rules-explained.html">Guides</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/disclaimer.html">Disclaimer</a>
+</nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<section class="hero">
+<h1>Security Deposit Calculator</h1>
+<section class="result"><h2>Short answer</h2><p><strong>California (AB 12, Civil Code 1950.5): generally 1 month's rent (2 months for a small landlord as defined in the statute), returned within 21 calendar days. Texas (Property Code 92.103, 92.107): no statutory cap, returned within 30 days after the tenant provides a forwarding address.</strong> Example: California, $2,000 rent with $2,500 charged = $500 overcharge. For every other state, the answer is Check official source.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<h2>Verified state deposit rules</h2>
+<table><tr><th>State</th><th>Verified deposit rule</th><th>Return deadline</th></tr><tr><td>California</td><td>Generally 1 month's rent; 2 months for a small landlord as defined in the statute (AB 12, Civil Code 1950.5)</td><td>21 calendar days after vacating</td></tr><tr><td>Texas</td><td>No statutory cap; the lease amount controls (Property Code 92.103, 92.107)</td><td>30 days, with the forwarding-address trigger</td></tr><tr><td>All other states</td><td>Check official source</td><td>Check official source</td></tr></table>
+<p>Check the maximum deposit, any overcharge, the return deadline, and the refund after itemised deductions — for <strong>California and Texas only</strong>. For every other state, the result is <strong>Check official source</strong> with no numeric cap or deadline.</p>
+<p class="muted">Last verified: 2026-10-25</p>
+</section>
+
+<div class="warning" role="note"><strong>Warning:</strong> This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</div>
+
+<section class="tool" aria-labelledby="calculator-heading">
+<h2 id="calculator-heading">Calculator</h2>
+<form id="deposit-form" novalidate>
+<label for="state">State</label>
+<select id="state" name="state" required>
+<option value="">Select a state</option>
+<option value="CA">California</option>
+<option value="TX">Texas</option>
+<option value="OTHER">Another state</option>
+</select>
+
+<label for="rent">Monthly rent ($)</label>
+<input id="rent" name="rent" type="number" inputmode="decimal" min="0" step="0.01" required>
+
+<label for="deposit">Deposit charged ($)</label>
+<input id="deposit" name="deposit" type="number" inputmode="decimal" min="0" step="0.01" required>
+
+<label for="deductions">Itemised deductions claimed by landlord ($) — optional</label>
+<input id="deductions" name="deductions" type="number" inputmode="decimal" min="0" step="0.01" value="0" aria-describedby="deductions-help">
+<p id="deductions-help" class="muted"><small>Enter the total of the itemised deductions. This tool only subtracts the total you enter; it does not judge whether any deduction is lawful.</small></p>
+
+<label for="moveout">Move-out / vacating date</label>
+<input id="moveout" name="moveout" type="date" required>
+
+<fieldset>
+<legend>California small-landlord exception</legend>
+<label><input type="checkbox" id="small-landlord" name="small-landlord"> The landlord qualifies for the narrow small-landlord exception (California only)</label>
+<p class="muted"><small>Only check this if all of these are true: the landlord is a natural person, or an LLC whose members are only natural persons; owns no more than 2 properties totalling 4 units; and the tenant is not a service member. If any part is not true, leave it unchecked — the maximum is 1 month's rent.</small></p>
+</fieldset>
+
+<label for="forwarding">Texas forwarding-address date (Texas only)</label>
+<input id="forwarding" name="forwarding" type="date" aria-describedby="forwarding-help">
+<p id="forwarding-help" class="muted"><small>Texas: the landlord's return duty is not triggered until the tenant provides a written forwarding address. The 30-day deadline runs from that date, not from move-out alone.</small></p>
+
+<button type="submit">Calculate deposit &amp; deadline</button>
+</form>
+<div class="result" id="result" aria-live="polite" hidden></div>
+</section>
+
+<section>
+<h2>Formula</h2>
+<div class="formula">
+<p><strong>California (AB 12, Civil Code 1950.5):</strong> maximum deposit = 1 × monthly rent generally; 2 × monthly rent only under the narrow small-landlord exception described above. Overcharge = deposit charged − maximum deposit (if positive). Return deadline = move-out date + 21 calendar days.</p>
+<p><strong>Texas (Property Code 92.103, 92.107):</strong> no statutory cap — the lease amount controls, so there is no overcharge figure to compute. Return deadline = forwarding-address date + 30 days. Without a forwarding-address date, no deadline can be calculated, because the duty has not been triggered on the facts entered.</p>
+<p><strong>Refund after deductions:</strong> refund = deposit charged − itemised deductions entered. No interest is calculated by this tool.</p>
+</div>
+</section>
+
+<section>
+<h2>Worked examples</h2>
+<div class="example">
+<p><strong>Example 1 — California, general rule:</strong> Rent $2,000, deposit charged $2,500, move-out 2026-10-01, deductions $300. Maximum = 1 × $2,000 = $2,000. Overcharge = $500. Return deadline = 2026-10-01 + 21 days = 2026-10-22. Refund after deductions = $2,500 − $300 = $2,200 (before any separate overcharge question — see Limitations).</p>
+<p><strong>Example 2 — California, small-landlord exception:</strong> Rent $2,000, deposit charged $4,000, all exception conditions met. Maximum = 2 × $2,000 = $4,000. Overcharge = $0. Return deadline is still move-out + 21 calendar days.</p>
+<p><strong>Example 3 — Texas:</strong> Rent $2,000, deposit charged $3,000, forwarding-address date 2026-10-05, deductions $400. No statutory cap, so no overcharge is computed. Return deadline = 2026-10-05 + 30 days = 2026-11-04. Refund after deductions = $3,000 − $400 = $2,600.</p>
+<p><strong>Example 4 — Texas, no forwarding address yet:</strong> Same facts but no forwarding-address date entered. No return deadline can be calculated, because the landlord's duty is not triggered until the tenant provides a written forwarding address.</p>
+</div>
+</section>
+
+<section>
+<h2>Limitations</h2>
+<ul>
+<li>Only California and Texas are verified for this tool. All other states return “Check official source” with no numeric cap or deadline.</li>
+<li>Texas has no statutory cap, so this tool cannot call a Texas deposit an overcharge on state law alone; the lease controls the amount.</li>
+<li>The refund figure is deposit minus the deductions total you entered. It does not judge whether deductions are lawful, documented, or itemised correctly.</li>
+<li>If the deposit charged exceeds the California maximum, the refund-after-deductions figure and the overcharge figure are different questions; this tool shows both separately and does not merge them into a single amount owed.</li>
+<li>No interest is calculated. No interest rule is in the verified list for this tool.</li>
+<li>Local ordinances may be stricter and may override state rules.</li>
+</ul>
+</section>
+
+<section>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.truedoorpm.com/security-deposit-rules-california-2026/">TrueDoor PM — Security deposit rules, California 2026</a></li>
+<li><a href="https://www.nolo.com/landlord-tenant/texas-landlord-guide-security-deposit-disputes.html">Nolo — Texas landlord guide: security deposit disputes</a></li>
+</ul>
+<p class="muted">Last verified: 2026-10-25. Verify the current law and any city ordinance before acting.</p>
+</section>
+<h2>Frequently asked questions</h2><h3>What is the California security deposit maximum?</h3><p>Generally one month&#x27;s rent under AB 12 (Civil Code 1950.5), with a narrow small-landlord exception up to two months. The deposit must generally be returned within 21 calendar days after vacating.</p><h3>Does Texas cap security deposits?</h3><p>Texas has no statutory cap; the lease amount controls. The return period is 30 days, and the landlord&#x27;s duty is not triggered until the tenant provides a written forwarding address.</p><h3>Does this calculator compute interest on a deposit?</h3><p>No. No interest calculation is included, because no interest rule is in the verified list for this tool.</p>
+</article>
+</main></div>
+<footer class="site"><div class="wrap"><p>US Rent Tools — general information only, not legal advice. <a href="../pages/disclaimer.html">Disclaimer</a> · <a href="../pages/methodology.html">Methodology</a></p></div></footer>
+<script>
+(function(){
+  var form=document.getElementById('deposit-form');
+  var result=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2).replace(/\.00$/,'');}
+  function parseDate(s){if(!s)return null;var p=s.split('-');if(p.length!==3)return null;var d=new Date(parseInt(p[0],10),parseInt(p[1],10)-1,parseInt(p[2],10));return isNaN(d.getTime())?null:d;}
+  function fmt(d){var y=d.getFullYear();var m=('0'+(d.getMonth()+1)).slice(-2);var day=('0'+d.getDate()).slice(-2);return y+'-'+m+'-'+day;}
+  function addDays(d,n){var c=new Date(d.getTime());c.setDate(c.getDate()+n);return c;}
+  function show(html){result.hidden=false;result.innerHTML=html;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var state=document.getElementById('state').value;
+    var rent=parseFloat(document.getElementById('rent').value);
+    var deposit=parseFloat(document.getElementById('deposit').value);
+    var dedRaw=document.getElementById('deductions').value;
+    var deductions=dedRaw==='' ? 0 : parseFloat(dedRaw);
+    var moveout=parseDate(document.getElementById('moveout').value);
+    var forwarding=parseDate(document.getElementById('forwarding').value);
+    var small=document.getElementById('small-landlord').checked;
+    if(!state || isNaN(rent) || isNaN(deposit) || isNaN(deductions) || !moveout || rent<0 || deposit<0 || deductions<0){
+      show('<p role="alert"><strong>Please check your entries.</strong> Select a state, enter a monthly rent and a deposit charged of $0 or more, deductions of $0 or more, and a move-out date.</p>');
+      return;
+    }
+    var refund=deposit-deductions;
+    var refundHtml='<p>Refund after deductions: '+money(deposit)+' − '+money(deductions)+' = <strong>'+money(refund)+'</strong>.</p><p class="muted"><small>This subtracts only the deductions total you entered. It does not judge whether any deduction is lawful.</small></p>';
+    if(state==='OTHER'){
+      show('<p><strong>Check official source</strong></p><p>No verified deposit cap or return deadline is built into this tool for the state you selected. Check the official source for your city and state before acting.</p>'+refundHtml);
+      return;
+    }
+    if(state==='CA'){
+      var mult=small?2:1;
+      var max=rent*mult;
+      var over=Math.max(0,deposit-max);
+      var deadline=fmt(addDays(moveout,21));
+      var overHtml=over>0?'<p>Overcharge: <strong>'+money(over)+'</strong> ('+money(deposit)+' charged − '+money(max)+' maximum).</p>':'<p>Overcharge: <strong>$0</strong>. The deposit charged is within the maximum on the facts entered.</p>';
+      var excHtml=small?'<p>Small-landlord exception applied: maximum = 2 × '+money(rent)+' = '+money(max)+'. This applies only if every exception condition on the form is true.</p>':'<p>Maximum deposit (general rule, AB 12, Civil Code 1950.5): 1 × '+money(rent)+' = <strong>'+money(max)+'</strong>.</p>';
+      show(excHtml+overHtml+'<p>Return deadline: move-out '+fmt(moveout)+' + 21 calendar days = <strong>'+deadline+'</strong>.</p>'+refundHtml+'<p class="muted"><small>No interest is calculated by this tool.</small></p>');
+      return;
+    }
+    // Texas
+    var txHtml='<p>Maximum deposit: <strong>No statutory cap</strong> — the lease amount controls (Texas Property Code 92.103, 92.107). No overcharge figure is computed on state law alone.</p>';
+    if(!forwarding){
+      txHtml+='<p><strong>Return deadline: cannot be calculated yet.</strong> In Texas, the landlord\'s duty is not triggered until the tenant provides a written forwarding address. Enter the forwarding-address date to calculate the 30-day deadline.</p>';
+    }else{
+      txHtml+='<p>Return deadline: forwarding-address date '+fmt(forwarding)+' + 30 days = <strong>'+fmt(addDays(forwarding,30))+'</strong>.</p>';
+    }
+    show(txHtml+refundHtml+'<p class="muted"><small>No interest is calculated by this tool.</small></p>');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Late Fee Checker — Oregon | US Rent Tools</title>
+<meta name="description" content="Check an Oregon late fee under ORS 90.260: 4-day grace, fee must be in the written rental agreement, and the 5% per 5-day period structure. All other states: check the official source.">
+<link rel="canonical" href="https://www.example.com/tools/late-fee-checker.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Late Fee Checker","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Checks an Oregon late fee under ORS 90.260 using the 5% per 5-day period structure after a 4-day grace period.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Oregon's late fee grace period?","acceptedAnswer":{"@type":"Answer","text":"Under ORS 90.260 there is a 4-day grace period: rent due on day 1 is late on day 5."}},{"@type":"Question","name":"Is Oregon's late fee a single flat 5% cap?","acceptedAnswer":{"@type":"Answer","text":"No. This tool does not present a single flat 5% overall cap as settled law. The 5% per 5-day period structure is one statutory structure; daily and flat structures also exist and depend on the written agreement terms."}},{"@type":"Question","name":"Must the late fee be in the rental agreement?","acceptedAnswer":{"@type":"Answer","text":"Yes. Under ORS 90.260 the fee must be in the written rental agreement. Always check the lease's written fee term."}}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Late Fee Checker — Oregon", "step": [{"@type": "HowToStep", "name": "Select Oregon", "text": "This tool calculates only the verified Oregon structure; every other state returns Check official source."}, {"@type": "HowToStep", "name": "Enter rent, due date, and paid date", "text": "Enter the periodic rent, the due date, and the date rent was paid."}, {"@type": "HowToStep", "name": "Select the fee structure", "text": "Select the 5% per succeeding 5-day period structure, the only structure this tool calculates."}, {"@type": "HowToStep", "name": "Check the grace end date and fee", "text": "Read the grace end date, days late after grace, number of periods, and the fee, and check the lease's written fee term."}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation">
+<a href="../index.html">Home</a>
+<a href="prorated-rent-calculator.html">Prorated Rent</a>
+<a href="rent-increase-cap-checker.html">Rent Cap</a>
+<a href="security-deposit-calculator.html">Deposit</a>
+<a href="late-fee-checker.html" aria-current="page">Late Fee</a>
+<a href="move-in-cost-calculator.html">Move-in Cost</a>
+<a href="lease-renewal-comparator.html">Renewal</a>
+<a href="../guides/rent-rules-explained.html">Guides</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/disclaimer.html">Disclaimer</a>
+</nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<section class="hero">
+<h1>Late Fee Checker — Oregon</h1>
+<section class="result"><h2>Short answer</h2><p><strong>Oregon (ORS 90.260): a 4-day grace period, the fee must be in the written rental agreement, and the structure used here is 5% of periodic rent for each succeeding 5-day period — as one structure, not a single flat 5% overall cap.</strong> Example: $2,000 rent paid 11 days after the due date = 7 days late after grace = 2 periods × $100 = $200. For every other state, the answer is Check official source.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<h2>Verified state late-fee rule</h2>
+<table><tr><th>State</th><th>Verified late-fee rule</th><th>Source</th></tr><tr><td>Oregon</td><td>4-day grace period; fee must be in a written agreement; 5% of periodic rent for each succeeding 5-day period, as one structure (not a single flat 5% overall cap)</td><td>ORS 90.260</td></tr><tr><td>All other states</td><td>Check official source</td><td>Check official source for your state and your lease</td></tr></table>
+<p>Work out the grace end date, days late after grace, and the fee under one verified Oregon structure: <strong>5% of periodic rent for each succeeding 5-day period</strong>. This tool does <strong>not</strong> claim a single flat 5% overall cap as settled law.</p>
+<p class="muted">Last verified: 2026-10-25</p>
+</section>
+
+<div class="warning" role="note"><strong>Warning:</strong> This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</div>
+
+<section class="tool" aria-labelledby="calculator-heading">
+<h2 id="calculator-heading">Calculator</h2>
+<form id="late-form" novalidate>
+<label for="state">State</label>
+<select id="state" name="state" required>
+<option value="">Select a state</option>
+<option value="OR">Oregon</option>
+<option value="OTHER">Another state</option>
+</select>
+
+<label for="rent">Monthly / periodic rent ($)</label>
+<input id="rent" name="rent" type="number" inputmode="decimal" min="0" step="0.01" required>
+
+<label for="due">Rent due date</label>
+<input id="due" name="due" type="date" required aria-describedby="due-help">
+<p id="due-help" class="muted"><small>Rent due on day 1 is late on day 5 under the 4-day grace period.</small></p>
+
+<label for="paid">Date rent was paid</label>
+<input id="paid" name="paid" type="date" required>
+
+<label for="structure">Fee structure (Oregon)</label>
+<select id="structure" name="structure" required>
+<option value="">Select a fee structure</option>
+<option value="per5">5% of periodic rent for each succeeding 5-day period</option>
+</select>
+<p class="muted"><small>Only this structure is calculated here. Daily and flat fee structures also exist under Oregon law and require the written agreement terms — this tool does not calculate them.</small></p>
+
+<button type="submit">Check the late fee</button>
+</form>
+<div class="result" id="result" aria-live="polite" hidden></div>
+</section>
+
+<section>
+<h2>Formula and counting convention</h2>
+<div class="formula">
+<p><strong>Grace end date</strong> = due date + 4 days. Rent is late on the next day (due date + 5 days).</p>
+<p><strong>Days late after grace</strong> = paid date − grace end date, if the paid date is after the grace end date; otherwise 0.</p>
+<p><strong>Counting convention — stated explicitly:</strong> each <em>started</em> 5-day period counts as a full period. Number of periods = ceiling(days late after grace ÷ 5). There is no silent rounding down: 1 day late after grace = 1 period; 5 days = 1 period; 6 days = 2 periods.</p>
+<p><strong>Fee due under this structure</strong> = number of periods × 5% × periodic rent.</p>
+<p><strong>Written-agreement requirement:</strong> under ORS 90.260 the fee must be in the written rental agreement. Check the lease's written fee term before relying on this calculation.</p>
+</div>
+</section>
+
+<section>
+<h2>Worked examples</h2>
+<div class="example">
+<p><strong>Example 1 — the required test:</strong> Rent $2,000, 5% per 5 days, paid 11 days after the due date. Grace end = due + 4 days, so days late after grace = 11 − 4 = 7 days. Periods = ceiling(7 ÷ 5) = 2 started periods. Fee = 2 × 5% × $2,000 = 2 × $100 = <strong>$200</strong>.</p>
+<p><strong>Example 2 — within grace:</strong> Rent $2,000, due 2026-10-01, paid 2026-10-04. Grace end = 2026-10-05. Paid on or before the grace end date, so days late after grace = 0 and fee under this structure = <strong>$0</strong>.</p>
+<p><strong>Example 3 — first period, then a second period starts:</strong> Rent $1,500, due 2026-10-01, paid 2026-10-11. Grace end = 2026-10-05. Days late after grace = 6. Periods = ceiling(6 ÷ 5) = 2. Fee = 2 × 5% × $1,500 = <strong>$150</strong>. Note that 5 days late after grace would be 1 period ($75); the 6th day starts the second period.</p>
+<p><strong>Example 4 — exactly one period:</strong> Rent $1,500, due 2026-10-01, paid 2026-10-10. Grace end = 2026-10-05. Days late after grace = 5. Periods = ceiling(5 ÷ 5) = 1. Fee = 1 × 5% × $1,500 = <strong>$75</strong>.</p>
+</div>
+</section>
+
+<section>
+<h2>Limitations</h2>
+<ul>
+<li>Only Oregon's structure above is verified for this tool. All other states return “Check official source” with no fee amount.</li>
+<li>This tool does <strong>not</strong> present a single flat 5% overall cap as settled law. The 5% figure here is per 5-day period, under the counting convention stated above, and the total can therefore exceed 5% of one month's rent if more periods elapse.</li>
+<li>Daily and flat fee structures exist and are not calculated here; they depend on the written agreement terms.</li>
+<li>The fee must be in the written rental agreement (ORS 90.260). If the lease has no such written term, do not rely on this calculation.</li>
+<li>This tool does not decide whether rent was in fact late, whether payment was received on the date entered, or whether any other remedy applies.</li>
+<li>Local ordinances may be stricter and may override state rules.</li>
+</ul>
+</section>
+
+<section>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://rentlatefee.com/oregon-rent-late-fee">RentLateFee — Oregon rent late fee</a></li>
+<li><a href="https://www.landlordstudio.com/blog/a-state-by-state-guide-to-late-fees">Landlord Studio — A state-by-state guide to late fees</a></li>
+</ul>
+<p class="muted">Last verified: 2026-10-25. Verify the current law, the statute (ORS 90.260), and any city ordinance before acting.</p>
+</section>
+<h2>Frequently asked questions</h2><h3>What is Oregon&#x27;s late fee grace period?</h3><p>Under ORS 90.260 there is a 4-day grace period: rent due on day 1 is late on day 5.</p><h3>Is Oregon&#x27;s late fee a single flat 5% cap?</h3><p>No. This tool does not present a single flat 5% overall cap as settled law. The 5% per 5-day period structure is one statutory structure; daily and flat structures also exist and depend on the written agreement terms.</p><h3>Must the late fee be in the rental agreement?</h3><p>Yes. Under ORS 90.260 the fee must be in the written rental agreement. Always check the lease&#x27;s written fee term.</p>
+</article>
+</main></div>
+<footer class="site"><div class="wrap"><p>US Rent Tools — general information only, not legal advice. <a href="../pages/disclaimer.html">Disclaimer</a> · <a href="../pages/methodology.html">Methodology</a></p></div></footer>
+<script>
+(function(){
+  var form=document.getElementById('late-form');
+  var result=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2).replace(/\.00$/,'');}
+  function parseDate(s){if(!s)return null;var p=s.split('-');if(p.length!==3)return null;var d=new Date(parseInt(p[0],10),parseInt(p[1],10)-1,parseInt(p[2],10));return isNaN(d.getTime())?null:d;}
+  function fmt(d){var y=d.getFullYear();var m=('0'+(d.getMonth()+1)).slice(-2);var day=('0'+d.getDate()).slice(-2);return y+'-'+m+'-'+day;}
+  function addDays(d,n){var c=new Date(d.getTime());c.setDate(c.getDate()+n);return c;}
+  function diffDays(a,b){return Math.round((a.getTime()-b.getTime())/86400000);}
+  function show(html){result.hidden=false;result.innerHTML=html;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var state=document.getElementById('state').value;
+    var rent=parseFloat(document.getElementById('rent').value);
+    var due=parseDate(document.getElementById('due').value);
+    var paid=parseDate(document.getElementById('paid').value);
+    var structure=document.getElementById('structure').value;
+    if(!state || isNaN(rent) || !due || !paid || rent<=0){
+      show('<p role="alert"><strong>Please check your entries.</strong> Select a state, enter a periodic rent above $0, and enter both a due date and a paid date.</p>');
+      return;
+    }
+    if(state==='OTHER'){
+      show('<p><strong>Check official source</strong></p><p>No verified late-fee structure is built into this tool for the state you selected. Check the official source for your city and state, and check the written rental agreement, before acting.</p>');
+      return;
+    }
+    if(!structure){
+      show('<p role="alert"><strong>Please select the Oregon fee structure.</strong> Only “5% of periodic rent for each succeeding 5-day period” is calculated by this tool.</p>');
+      return;
+    }
+    var graceEnd=addDays(due,4);
+    var rawLate=diffDays(paid,graceEnd);
+    var daysLate=rawLate>0?rawLate:0;
+    var periods=daysLate===0?0:Math.ceil(daysLate/5);
+    var perPeriod=rent*0.05;
+    var fee=periods*perPeriod;
+    var html='<p>Grace end date: due '+fmt(due)+' + 4 days = <strong>'+fmt(graceEnd)+'</strong>. Rent is late on '+fmt(addDays(due,5))+'.</p>';
+    html+='<p>Days late after grace: <strong>'+daysLate+'</strong> day(s)'+(daysLate>0?' ('+fmt(paid)+' − '+fmt(graceEnd)+').':' (paid on or before the grace end date).')+'</p>';
+    if(daysLate===0){
+      html+='<p>Fee due under this structure: <strong>$0</strong> (0 periods).</p>';
+    }else{
+      html+='<p>Periods (each started 5-day period counts): ceiling('+daysLate+' ÷ 5) = <strong>'+periods+'</strong>.</p>';
+      html+='<p>Fee due under this structure: '+periods+' × 5% × '+money(rent)+' = '+periods+' × '+money(perPeriod)+' = <strong>'+money(fee)+'</strong>.</p>';
+    }
+    html+='<p><strong>Check the lease\'s written fee term.</strong> Under ORS 90.260 the fee must be in the written rental agreement. This calculation covers only the 5%-per-5-day-period structure; it is not a single flat 5% overall cap, and daily/flat structures are not calculated here.</p>';
+    show(html);
+  });
+})();
+</script>
+</body>
+</html>

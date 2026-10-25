@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lease Renewal Comparator — US Rent Tools</title>
+<meta name="description" content="Compare the total cost of renewing your lease vs. moving to a new place over a period you choose, with monthly difference and break-even months.">
+<link rel="canonical" href="https://www.example.com/tools/lease-renewal-comparator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Lease Renewal Comparator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+{"@type":"ListItem","position":2,"name":"Lease Renewal Comparator","item":"https://www.example.com/tools/lease-renewal-comparator.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is the staying total calculated?", "acceptedAnswer": {"@type": "Answer", "text": "Renewal rent multiplied by the number of months compared."}}, {"@type": "Question", "name": "How is the moving total calculated?", "acceptedAnswer": {"@type": "Answer", "text": "New rent multiplied by the number of months, plus one-time moving costs and fees."}}, {"@type": "Question", "name": "What is the break-even point?", "acceptedAnswer": {"@type": "Answer", "text": "The number of months after which the lower monthly rent has covered the one-time moving costs: one-time costs divided by the monthly saving."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Lease Renewal Comparator", "step": [{"@type": "HowToStep", "name": "Enter current, renewal, and new rents", "text": "Enter the current rent, the renewal rent, and the new place's rent."}, {"@type": "HowToStep", "name": "Enter moving costs and fees", "text": "Enter one-time moving costs and fees for the new place."}, {"@type": "HowToStep", "name": "Choose the comparison period", "text": "Enter the number of months to compare as a whole number of 1 or more."}, {"@type": "HowToStep", "name": "Compare totals and break-even", "text": "Compare the staying total with the moving total, and read the break-even point in months."}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation">
+<a href="../index.html">Home</a>
+<a href="prorated-rent-calculator.html">Prorated Rent</a>
+<a href="rent-increase-cap-checker.html">Rent Cap</a>
+<a href="security-deposit-calculator.html">Deposit</a>
+<a href="late-fee-checker.html">Late Fee</a>
+<a href="move-in-cost-calculator.html">Move-in Cost</a>
+<a href="lease-renewal-comparator.html">Renewal</a>
+<a href="../guides/rent-rules-explained.html">Guides</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/disclaimer.html">Disclaimer</a>
+</nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<nav aria-label="Breadcrumb"><p><a href="../index.html">Home</a> &gt; Lease Renewal Comparator</p></nav>
+<h1>Lease Renewal Comparator</h1>
+<section class="result"><h2>Short answer</h2><p><strong>Staying costs renewal rent × months. Moving costs new rent × months + moving costs + fees.</strong> Moving breaks even after one-time costs ÷ monthly saving, once the lower rent has covered the cost of moving. Example over 12 months: staying at $2,200 = $26,400; moving to $1,900 with $1,200 of one-time costs = $24,000, breaking even after 4.0 months.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<h2>Worked example</h2>
+<table><tr><th>Option</th><th>Calculation</th><th>Total over 12 months</th></tr><tr><td>Staying (renewal)</td><td>$2,200 × 12</td><td>$26,400.00</td></tr><tr><td>Moving</td><td>$1,900 × 12 + $1,000 moving + $200 fees</td><td>$24,000.00</td></tr><tr><td>Break-even</td><td>$1,200 one-time costs ÷ $300 monthly saving</td><td>4.0 months</td></tr></table>
+<p>Should you renew or move? Compare the total cost of staying at the renewal rent against moving to a new place — including moving costs and fees — over the period you choose.</p>
+<p class="warning">This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</p>
+
+<div class="tool" aria-labelledby="calc-heading">
+<h2 id="calc-heading">Compare staying vs. moving</h2>
+<form id="form" novalidate>
+<label for="current">Current monthly rent ($)</label>
+<input id="current" name="current" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="renewal">Renewal monthly rent ($)</label>
+<input id="renewal" name="renewal" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="newplace">New place monthly rent ($)</label>
+<input id="newplace" name="newplace" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="moving">Moving costs ($, one-time)</label>
+<input id="moving" name="moving" type="number" inputmode="decimal" min="0" step="0.01">
+<label for="fees">New-place fees ($, one-time: application, admin, etc.)</label>
+<input id="fees" name="fees" type="number" inputmode="decimal" min="0" step="0.01">
+<label for="months">Months to compare</label>
+<input id="months" name="months" type="number" inputmode="numeric" min="1" step="1" value="12" required>
+<p id="error" role="alert" hidden></p>
+<button type="submit">Compare</button>
+<button type="button" id="print-btn">Print breakdown</button>
+</form>
+<div class="result" id="result" hidden></div>
+</div>
+
+<section class="formula">
+<h2>Formulas</h2>
+<ul>
+<li><strong>Total cost of staying</strong> = renewal rent × months.</li>
+<li><strong>Total cost of moving</strong> = new-place rent × months + moving costs + fees.</li>
+<li><strong>Monthly difference</strong> = renewal rent − new-place rent. A positive figure means staying costs more per month before one-time costs.</li>
+<li><strong>Break-even months</strong> = (moving costs + fees) ÷ (renewal rent − new-place rent), when the renewal rent is higher than the new-place rent. After that many months, the rent saving from moving has covered the one-time costs.</li>
+</ul>
+</section>
+
+<section class="example">
+<h2>Worked example</h2>
+<p>Current rent $1,800, renewal rent $1,950, new place $1,850, moving costs $800, fees $100, compared over 12 months.</p>
+<ul>
+<li>Staying: $1,950 × 12 = <strong>$23,400</strong>.</li>
+<li>Moving: $1,850 × 12 + $800 + $100 = <strong>$23,100</strong> — $300 cheaper over 12 months.</li>
+<li>Monthly difference: $1,950 − $1,850 = <strong>$100 per month</strong>.</li>
+<li>Break-even: ($800 + $100) ÷ $100 = <strong>9 months</strong>.</li>
+</ul>
+</section>
+
+<h2>Limitations</h2>
+<ul>
+<li>This is a rent-and-one-time-cost comparison only. It does not include deposits (often refundable), utilities, commuting, or quality-of-life differences between the two places.</li>
+<li>It assumes both rents stay flat over the comparison period. Real leases may include increases, concessions, or fee changes.</li>
+<li>It makes no claim about whether a renewal increase is lawful — that depends on your lease and on state and city rules. Check the official source for your city and state, and the <a href="rent-increase-cap-checker.html">Rent Cap calculator</a> where a verified cap exists.</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+<li>All figures come from the inputs you enter; no rent rule or cap is assumed by this calculator.</li>
+<li>For verified state rent-cap rules, see the <a href="../guides/rent-rules-explained.html">Guides</a> and check the official source for your city and state.</li>
+</ul>
+<p><small>Last verified: 2026-10-25.</small></p>
+<h2>Frequently asked questions</h2><h3>How is the staying total calculated?</h3><p>Renewal rent multiplied by the number of months compared.</p><h3>How is the moving total calculated?</h3><p>New rent multiplied by the number of months, plus one-time moving costs and fees.</p><h3>What is the break-even point?</h3><p>The number of months after which the lower monthly rent has covered the one-time moving costs: one-time costs divided by the monthly saving.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap">
+<p><a href="../index.html">Home</a> · <a href="../guides/rent-rules-explained.html">Guides</a> · <a href="../pages/about.html">About</a> · <a href="../pages/methodology.html">Methodology</a> · <a href="../pages/disclaimer.html">Disclaimer</a></p>
+<p>US Rent Tools — general information only, not legal advice.</p>
+</div></footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var err=document.getElementById('error');
+  var out=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2);}
+  function showError(msg){err.textContent=msg;err.hidden=false;out.hidden=true;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ids=['current','renewal','newplace','moving','fees','months'];
+    var vals={};
+    for(var i=0;i<ids.length;i++){
+      var v=document.getElementById(ids[i]).value;
+      if(ids[i]==='moving'||ids[i]==='fees'){vals[ids[i]]=v==='' ? 0 : parseFloat(v);}
+      else{
+        if(v===''||isNaN(parseFloat(v))){showError('Enter a valid number for every required field.');return;}
+        vals[ids[i]]=parseFloat(v);
+      }
+      if(isNaN(vals[ids[i]])||vals[ids[i]]<0){showError('Amounts cannot be negative. Enter $0 or more.');return;}
+    }
+    if(vals.months<1||Math.floor(vals.months)!==vals.months){showError('Months to compare must be a whole number of 1 or more.');return;}
+    var staying=vals.renewal*vals.months;
+    var movingTotal=vals.newplace*vals.months+vals.moving+vals.fees;
+    var diff=vals.renewal-vals.newplace;
+    var saving=staying-movingTotal;
+    var cheaper=saving>0?'Moving is cheaper':(saving<0?'Staying is cheaper':'Both cost the same');
+    var breakeven;
+    if(diff>0){breakeven='Moving breaks even after <strong>'+((vals.moving+vals.fees)/diff).toFixed(1)+' months</strong> — after that, the lower rent has covered the one-time moving costs.';}
+    else if(diff===0){breakeven='The rents are equal, so moving never breaks even on rent alone: the one-time costs are never recovered.';}
+    else{breakeven='The new place costs more per month than renewing, so moving never breaks even on rent alone.';}
+    err.hidden=true;out.hidden=false;
+    out.innerHTML='<h3>'+cheaper+' over '+vals.months+' months</h3>'
+      +'<table><tr><th>Option</th><th>Calculation</th><th>Total</th></tr>'
+      +'<tr><td>Staying (renewal)</td><td>'+money(vals.renewal)+' × '+vals.months+' months</td><td><strong>'+money(staying)+'</strong></td></tr>'
+      +'<tr><td>Moving</td><td>'+money(vals.newplace)+' × '+vals.months+' + '+money(vals.moving)+' moving + '+money(vals.fees)+' fees</td><td><strong>'+money(movingTotal)+'</strong></td></tr></table>'
+      +'<p>Difference over '+vals.months+' months: <strong>'+money(Math.abs(saving))+'</strong> in favour of '+(saving>0?'moving':(saving<0?'staying':'neither'))+'.</p>'
+      +'<p>Monthly difference (renewal − new place): <strong>'+money(diff)+' per month</strong>.</p>'
+      +'<p>'+breakeven+'</p>'
+      +'<p>For reference, your current rent is '+money(vals.current)+' per month; the renewal is '+money(vals.renewal-vals.current)+' per month '+(vals.renewal>=vals.current?'more':'less')+' than now.</p>';
+  });
+  document.getElementById('print-btn').addEventListener('click',function(){window.print();});
+})();
+</script>
+</body>
+</html>

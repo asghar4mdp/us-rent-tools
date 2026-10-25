@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent Increase Cap Checker — California &amp; Washington | US Rent Tools</title>
+<meta name="description" content="Check a proposed rent increase against the California AB 1482 and Washington HB 1217 state formulas. Enter current rent, proposed rent, CPI and tenancy length. All other states: check the official source.">
+<link rel="canonical" href="https://www.example.com/tools/rent-increase-cap-checker.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rent Increase Cap Checker","applicationCategory":"FinanceApplication","operatingSystem":"Any","description":"Checks a proposed rent increase against the California and Washington state rent formulas, using only the verified rules stated on the page.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the California rent increase cap under AB 1482?","acceptedAnswer":{"@type":"Answer","text":"For covered properties, the maximum is the smaller of 5% plus local CPI and 10% per 12 months, under Civil Code 1947.12. Exemptions exist, and local ordinances may be stricter."}},{"@type":"Question","name":"What is the Washington rent increase cap under HB 1217?","acceptedAnswer":{"@type":"Answer","text":"The maximum is the smaller of 7% plus CPI and 10% per 12 months, under RCW 59.18.700. No increase is allowed in the first 12 months of tenancy."}},{"@type":"Question","name":"What if a local ordinance or exemption may apply?","acceptedAnswer":{"@type":"Answer","text":"Then this tool returns Check official source. Do not rely on the state formula alone when coverage, an exemption, or a stricter local ordinance is uncertain."}}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Rent Increase Cap Checker", "step": [{"@type": "HowToStep", "name": "Select the state", "text": "Select California or Washington; every other state returns Check official source."}, {"@type": "HowToStep", "name": "Enter current rent, proposed rent, CPI, and tenancy length", "text": "Enter the figures exactly as shown on the increase notice."}, {"@type": "HowToStep", "name": "Answer the local ordinance question", "text": "If a local ordinance or exemption may apply, or you are not sure, the tool returns Check official source."}, {"@type": "HowToStep", "name": "Compare with the capped rent", "text": "Compare the proposed rent with the capped rent from the verified state formula."}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation">
+<a href="../index.html">Home</a>
+<a href="prorated-rent-calculator.html">Prorated Rent</a>
+<a href="rent-increase-cap-checker.html" aria-current="page">Rent Cap</a>
+<a href="security-deposit-calculator.html">Deposit</a>
+<a href="late-fee-checker.html">Late Fee</a>
+<a href="move-in-cost-calculator.html">Move-in Cost</a>
+<a href="lease-renewal-comparator.html">Renewal</a>
+<a href="../guides/rent-rules-explained.html">Guides</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/disclaimer.html">Disclaimer</a>
+</nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<section class="hero">
+<h1>Rent Increase Cap Checker</h1>
+<section class="result"><h2>Short answer</h2><p>For covered properties only: <strong>California (AB 1482, Civil Code 1947.12) maximum = min(5% + CPI, 10%); Washington (HB 1217, RCW 59.18.700) maximum = min(7% + CPI, 10%), with no increase in the first 12 months.</strong> Example: California, $2,000 rent with 3% CPI = maximum $2,160. For every other state, or if coverage, an exemption, or a local ordinance is uncertain, the answer is Check official source.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<h2>Verified state rent caps</h2>
+<table><tr><th>State</th><th>Verified cap</th><th>Source</th></tr><tr><td>California</td><td>Maximum increase = min(5% + CPI, 10%) per 12 months, for covered properties</td><td>AB 1482, Civil Code 1947.12</td></tr><tr><td>Washington</td><td>Maximum increase = min(7% + CPI, 10%); no increase in the first 12 months</td><td>HB 1217, RCW 59.18.700</td></tr><tr><td>All other states</td><td>Check official source</td><td>No verified state cap is used on this site for other states</td></tr></table>
+<p>Compare a proposed rent increase with the <strong>verified state formula for California or Washington only</strong>. For every other state, and whenever coverage, an exemption, or a local ordinance is uncertain, the result is <strong>Check official source</strong> — never a bare yes or no.</p>
+<p class="muted">Last verified: 2026-10-25</p>
+</section>
+
+<div class="warning" role="note"><strong>Warning:</strong> This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</div>
+
+<section class="tool" aria-labelledby="calculator-heading">
+<h2 id="calculator-heading">Calculator</h2>
+<form id="cap-form" novalidate>
+<label for="state">State</label>
+<select id="state" name="state" required>
+<option value="">Select a state</option>
+<option value="CA">California</option>
+<option value="WA">Washington</option>
+<option value="OTHER">Another state</option>
+</select>
+
+<label for="current">Current monthly rent ($)</label>
+<input id="current" name="current" type="number" inputmode="decimal" min="0" step="0.01" required aria-describedby="current-help">
+<p id="current-help" class="muted"><small>Enter the rent currently charged, before the proposed increase.</small></p>
+
+<label for="proposed">Proposed monthly rent ($)</label>
+<input id="proposed" name="proposed" type="number" inputmode="decimal" min="0" step="0.01" required>
+
+<label for="cpi">Local CPI (%)</label>
+<input id="cpi" name="cpi" type="number" inputmode="decimal" step="0.01" required aria-describedby="cpi-help">
+<p id="cpi-help" class="muted"><small>Enter the applicable local CPI percentage as a number, for example 3.5 for 3.5%. This tool does not look up CPI for you.</small></p>
+
+<label for="tenancy">Tenancy length so far (months)</label>
+<input id="tenancy" name="tenancy" type="number" inputmode="numeric" min="0" step="1" required aria-describedby="tenancy-help">
+<p id="tenancy-help" class="muted"><small>Needed for Washington: no increase is allowed in the first 12 months.</small></p>
+
+<fieldset>
+<legend>Could a local ordinance or an exemption apply?</legend>
+<label><input type="radio" name="uncertain" value="yes" required> Yes, or I am not sure</label>
+<label><input type="radio" name="uncertain" value="no"> No</label>
+</fieldset>
+<p class="muted"><small>Examples of uncertainty: a building under 15 years old in California, some single-family homes, or any city ordinance that may be stricter. If you select “Yes, or I am not sure”, the result is forced to “Check official source”.</small></p>
+
+<button type="submit">Check the increase</button>
+</form>
+<div class="result" id="result" aria-live="polite" hidden></div>
+</section>
+
+<section>
+<h2>Formula</h2>
+<div class="formula">
+<p><strong>Percentage increase</strong> = (proposed rent − current rent) ÷ current rent × 100.</p>
+<p><strong>California (AB 1482, Civil Code 1947.12), covered properties:</strong> maximum increase = minimum(5% + local CPI, 10%) per 12 months. Capped rent = current rent × (1 + maximum increase ÷ 100).</p>
+<p><strong>Washington (HB 1217, RCW 59.18.700):</strong> maximum increase = minimum(7% + CPI, 10%) per 12 months. No increase is allowed in the first 12 months of tenancy. Note only: manufactured / mobile homes are described in the verified rules at 5% — this tool does not build a separate manufactured-home calculator, so if that may apply, use “Check official source”.</p>
+<p><strong>Result wording is always one of three outcomes:</strong> “Allowed under the state formula you selected”, “Capped at $X”, or “Check official source”.</p>
+</div>
+</section>
+
+<section>
+<h2>Worked examples</h2>
+<div class="example">
+<p><strong>Example 1 — California, allowed:</strong> Current $2,000, proposed $2,150, CPI 3%. Cap = min(5% + 3%, 10%) = 8%. Capped rent = $2,000 × 1.08 = $2,160. Proposed increase = 7.5%, which is within the cap, so the result is “Allowed under the state formula you selected” (assuming no exemption or stricter local ordinance applies).</p>
+<p><strong>Example 2 — California, capped:</strong> Current $2,000, proposed $2,300, CPI 3%. Cap = 8%, capped rent = $2,160. Proposed increase = 15%, so the result is “Capped at $2,160”.</p>
+<p><strong>Example 3 — Washington, first-year freeze:</strong> Current $1,800, proposed $1,900, tenancy 6 months. No increase is allowed in the first 12 months, so the result is “Capped at $1,800” regardless of the 7% + CPI formula.</p>
+<p><strong>Example 4 — Washington, capped:</strong> Current $1,800, proposed $2,050, CPI 2%, tenancy 18 months. Cap = min(7% + 2%, 10%) = 9%. Capped rent = $1,800 × 1.09 = $1,962. Proposed increase ≈ 13.9%, so the result is “Capped at $1,962”.</p>
+</div>
+</section>
+
+<section>
+<h2>Limitations</h2>
+<ul>
+<li>Only California and Washington state formulas are verified for this tool. All other states return “Check official source” with no numeric cap.</li>
+<li>Coverage and exemptions are not decided by this tool. California exemptions include, for example, buildings under 15 years old and some single-family properties; the tool does not determine whether a property is covered.</li>
+<li>Local ordinances may be stricter and may override state rules. A result of “Allowed under the state formula you selected” does not clear a stricter city rule.</li>
+<li>CPI must be entered by the user; the tool does not verify which CPI measure or period applies to a particular tenancy.</li>
+<li>Notice, frequency, and other procedural requirements are not covered by this calculator.</li>
+</ul>
+</section>
+
+<section>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482">San Francisco — California Tenant Protection Act of 2019 (AB 1482)</a></li>
+<li><a href="https://nlihc.org/resource/washington-housing-advocates-secure-statewide-rent-stabilization">National Low Income Housing Coalition — Washington statewide rent stabilization</a></li>
+<li><a href="https://legalclarity.org/how-much-can-you-raise-rent-in-washington-state/">LegalClarity — How much can you raise rent in Washington State?</a></li>
+</ul>
+<p class="muted">Last verified: 2026-10-25. Verify the current law and any city ordinance before acting.</p>
+</section>
+<h2>Frequently asked questions</h2><h3>What is the California rent increase cap under AB 1482?</h3><p>For covered properties, the maximum is the smaller of 5% plus local CPI and 10% per 12 months, under Civil Code 1947.12. Exemptions exist, and local ordinances may be stricter.</p><h3>What is the Washington rent increase cap under HB 1217?</h3><p>The maximum is the smaller of 7% plus CPI and 10% per 12 months, under RCW 59.18.700. No increase is allowed in the first 12 months of tenancy.</p><h3>What if a local ordinance or exemption may apply?</h3><p>Then this tool returns Check official source. Do not rely on the state formula alone when coverage, an exemption, or a stricter local ordinance is uncertain.</p>
+</article>
+</main></div>
+<footer class="site"><div class="wrap"><p>US Rent Tools — general information only, not legal advice. <a href="../pages/disclaimer.html">Disclaimer</a> · <a href="../pages/methodology.html">Methodology</a></p></div></footer>
+<script>
+(function(){
+  var form=document.getElementById('cap-form');
+  var result=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2).replace(/\.00$/,'');}
+  function show(html){result.hidden=false;result.innerHTML=html;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var state=document.getElementById('state').value;
+    var current=parseFloat(document.getElementById('current').value);
+    var proposed=parseFloat(document.getElementById('proposed').value);
+    var cpi=parseFloat(document.getElementById('cpi').value);
+    var tenancy=parseFloat(document.getElementById('tenancy').value);
+    var uncertainEl=form.querySelector('input[name="uncertain"]:checked');
+    if(!state || isNaN(current) || isNaN(proposed) || isNaN(cpi) || isNaN(tenancy) || !uncertainEl || current<=0 || proposed<0 || tenancy<0){
+      show('<p role="alert"><strong>Please check your entries.</strong> Select a state, enter a current rent above $0, a proposed rent of $0 or more, a CPI percentage, a tenancy length in months, and answer the local ordinance / exemption question.</p>');
+      return;
+    }
+    var pct=(proposed-current)/current*100;
+    var pctText=pct.toFixed(2)+'%';
+    var base='<p>Proposed increase: <strong>'+pctText+'</strong> ('+money(current)+' → '+money(proposed)+').</p>';
+    if(state==='OTHER'){
+      show(base+'<p><strong>Check official source</strong></p><p>No verified state rent cap is built into this tool for the state you selected. Check the official source for your city and state before acting.</p>');
+      return;
+    }
+    if(uncertainEl.value==='yes'){
+      show(base+'<p><strong>Check official source</strong></p><p>You indicated a local ordinance or exemption may apply, or you are not sure. This tool cannot rely on the state formula in that case. Check the official source for your city and state, including whether the property is covered and whether a stricter local ordinance applies, before acting.</p>');
+      return;
+    }
+    if(state==='WA' && tenancy<12){
+      show(base+'<p><strong>Capped at '+money(current)+'</strong></p><p>Washington: no increase is allowed in the first 12 months of tenancy (RCW 59.18.700). Tenancy entered: '+tenancy+' month(s). The capped rent is therefore the current rent.</p>');
+      return;
+    }
+    var cap, label;
+    if(state==='CA'){cap=Math.min(5+cpi,10);label='California AB 1482 (Civil Code 1947.12)';}
+    else{cap=Math.min(7+cpi,10);label='Washington HB 1217 (RCW 59.18.700)';}
+    var capped=current*(1+cap/100);
+    var formula='<p>'+label+': maximum = minimum('+(state==='CA'?'5%':'7%')+' + '+cpi+'% CPI, 10%) = '+cap.toFixed(2)+'%. Capped rent = '+money(current)+' × '+(1+cap/100).toFixed(4)+' = '+money(capped)+'.</p>';
+    if(proposed<=capped+0.005){
+      show(base+formula+'<p><strong>Allowed under the state formula you selected</strong></p><p>This checks only the state formula you selected. It does not clear a stricter local ordinance, and it assumes the property is covered and no exemption applies (as you answered).</p>');
+    }else{
+      show(base+formula+'<p><strong>Capped at '+money(capped)+'</strong></p><p>Under the state formula you selected, the proposed rent exceeds the capped rent. This does not clear a stricter local ordinance, which could cap the increase lower.</p>');
+    }
+  });
+})();
+</script>
+</body>
+</html>

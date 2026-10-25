@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prorated Rent Calculator — US Rent Tools</title>
+<meta name="description" content="Calculate prorated rent for move-in or move-out with all three methods: actual days, 30-day, and 365-day. Printable breakdown and shareable link.">
+<link rel="canonical" href="https://www.example.com/tools/prorated-rent-calculator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Prorated Rent Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+{"@type":"ListItem","position":2,"name":"Prorated Rent Calculator","item":"https://www.example.com/tools/prorated-rent-calculator.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is prorated rent?", "acceptedAnswer": {"@type": "Answer", "text": "Prorated rent is rent for part of a month, calculated from the days you occupy the home."}}, {"@type": "Question", "name": "Which method should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Use the method stated in your lease. This calculator shows actual-days, 30-day, and 365-day figures side by side so you can compare them."}}, {"@type": "Question", "name": "Does the move-in day count?", "acceptedAnswer": {"@type": "Answer", "text": "On this site, yes: move-in days run from the move-in date to month-end inclusive, and move-out days run from month-start to the move-out date inclusive, unless your lease counts differently."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Prorated Rent Calculator", "step": [{"@type": "HowToStep", "name": "Confirm the lease method", "text": "Check whether your lease uses actual days, a 30-day month, or a 365-day year."}, {"@type": "HowToStep", "name": "Enter rent and date", "text": "Enter the monthly rent and the move-in or move-out date."}, {"@type": "HowToStep", "name": "Compare the three results", "text": "Compare the actual-days, 30-day, and 365-day figures with the method stated in your lease."}, {"@type": "HowToStep", "name": "Check the official source", "text": "If a state or city rule affects the result, check the official source for your city and state before acting."}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation">
+<a href="../index.html">Home</a>
+<a href="prorated-rent-calculator.html">Prorated Rent</a>
+<a href="rent-increase-cap-checker.html">Rent Cap</a>
+<a href="security-deposit-calculator.html">Deposit</a>
+<a href="late-fee-checker.html">Late Fee</a>
+<a href="move-in-cost-calculator.html">Move-in Cost</a>
+<a href="lease-renewal-comparator.html">Renewal</a>
+<a href="../guides/rent-rules-explained.html">Guides</a>
+<a href="../pages/about.html">About</a>
+<a href="../pages/methodology.html">Methodology</a>
+<a href="../pages/disclaimer.html">Disclaimer</a>
+</nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<nav aria-label="Breadcrumb"><p><a href="../index.html">Home</a> &gt; Prorated Rent Calculator</p></nav>
+<h1>Prorated Rent Calculator</h1>
+<section class="result"><h2>Short answer</h2><p>Prorated rent is rent for part of a month, when you move in mid-month or move out before month-end. <strong>Example: $1,800 rent, move-in 16 October in a 31-day month, actual-days method = $1,800 ÷ 31 × 16 = $929.03.</strong> Always use the method stated in your lease, and compare all three methods shown by the calculator.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<h2>Worked examples at a glance</h2>
+<table><tr><th>Method</th><th>Formula</th><th>Example: $1,800, 16 days</th></tr><tr><td>Actual days</td><td>Rent ÷ days in the month × days occupied</td><td>$929.03 in a 31-day month</td></tr><tr><td>30-day</td><td>Rent ÷ 30 × days occupied</td><td>$960.00</td></tr><tr><td>365-day</td><td>Rent × 12 ÷ 365 × days occupied</td><td>$946.85</td></tr></table>
+<p>Prorated rent is the rent owed for part of a month — when you move in mid-month or move out before month-end. This calculator shows all three common methods side by side so you can compare them with what your lease says.</p>
+<p class="warning">This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</p>
+
+<div class="tool" aria-labelledby="calc-heading">
+<h2 id="calc-heading">Calculate prorated rent</h2>
+<p><strong>Counting convention used here:</strong> for a move-in, days occupied run from the move-in date to the end of that month <em>inclusive</em> (the move-in day counts). For a move-out, days occupied run from the first day of the month to the move-out date <em>inclusive</em> (the move-out day counts). Some leases count differently — if yours does, use its convention instead.</p>
+<form id="form" novalidate>
+<label for="rent">Monthly rent ($)</label>
+<input id="rent" name="rent" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="move">Move-in or move-out?</label>
+<select id="move" name="move">
+<option value="in">Move-in</option>
+<option value="out">Move-out</option>
+</select>
+<label for="date">Move-in / move-out date</label>
+<input id="date" name="date" type="date" required>
+<p id="error" role="alert" hidden></p>
+<button type="submit">Calculate</button>
+<button type="button" id="print-btn">Print breakdown</button>
+</form>
+<div class="result" id="result" hidden></div>
+<p id="share" hidden>Shareable link: <a id="share-link" href="#">this calculation</a></p>
+</div>
+
+<section class="formula">
+<h2>Formulas</h2>
+<ul>
+<li><strong>Actual days:</strong> monthly rent ÷ days in that month × days occupied.</li>
+<li><strong>30-day method:</strong> monthly rent ÷ 30 × days occupied.</li>
+<li><strong>365-day method:</strong> monthly rent × 12 ÷ 365 × days occupied.</li>
+</ul>
+<p>The three methods can give different answers for the same move. That is normal: they use different day-count bases. Your lease should state which method applies — if it does not, ask your landlord to confirm in writing before paying.</p>
+</section>
+
+<section class="example">
+<h2>Worked examples</h2>
+<ul>
+<li><strong>Move-in, actual days:</strong> $1,800 rent, move-in October 16 in a 31-day month. Days occupied = 31 − 16 + 1 = 16. $1,800 ÷ 31 × 16 = <strong>$929.03</strong>.</li>
+<li><strong>30-day method:</strong> $1,500 rent, 10 days occupied. $1,500 ÷ 30 × 10 = <strong>$500.00</strong>.</li>
+<li><strong>365-day method:</strong> $2,400 rent, 15 days occupied. $2,400 × 12 ÷ 365 × 15 = <strong>$1,183.56</strong>.</li>
+</ul>
+</section>
+
+<h2>Limitations</h2>
+<ul>
+<li>This calculator does not read your lease. If your lease specifies a different method or counting convention, the lease figure governs what you are asked to pay.</li>
+<li>It does not account for rent concessions, credits, fees, or local rules that may change how a partial month is billed.</li>
+<li>Amounts are rounded to the nearest cent; landlords may round differently.</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+<li>No single federal rule prescribes a prorating method; the three methods above are the standard conventions used in leases and rental guidance. The method in your lease is the one that matters for your tenancy.</li>
+<li>For state and city rules that may affect your tenancy, check the official source for your city and state (see <a href="../guides/rent-rules-explained.html">Guides</a>).</li>
+</ul>
+<p><small>Last verified: 2026-10-25.</small></p>
+<p>Next step: use the result in the <a href="move-in-cost-calculator.html">Move-in Cost Calculator</a> to total your first-month cash.</p>
+<h2>Frequently asked questions</h2><h3>What is prorated rent?</h3><p>Prorated rent is rent for part of a month, calculated from the days you occupy the home.</p><h3>Which method should I use?</h3><p>Use the method stated in your lease. This calculator shows actual-days, 30-day, and 365-day figures side by side so you can compare them.</p><h3>Does the move-in day count?</h3><p>On this site, yes: move-in days run from the move-in date to month-end inclusive, and move-out days run from month-start to the move-out date inclusive, unless your lease counts differently.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap">
+<p><a href="../index.html">Home</a> · <a href="../guides/rent-rules-explained.html">Guides</a> · <a href="../pages/about.html">About</a> · <a href="../pages/methodology.html">Methodology</a> · <a href="../pages/disclaimer.html">Disclaimer</a></p>
+<p>US Rent Tools — general information only, not legal advice.</p>
+</div></footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var err=document.getElementById('error');
+  var out=document.getElementById('result');
+  var share=document.getElementById('share');
+  var shareLink=document.getElementById('share-link');
+  function money(n){return '$'+n.toFixed(2);}
+  function showError(msg){err.textContent=msg;err.hidden=false;out.hidden=true;share.hidden=true;}
+  function calc(){
+    var rent=parseFloat(document.getElementById('rent').value);
+    var move=document.getElementById('move').value;
+    var dateVal=document.getElementById('date').value;
+    if(document.getElementById('rent').value===''||isNaN(rent)){showError('Enter your monthly rent as a number.');return;}
+    if(rent<0){showError('Monthly rent cannot be negative.');return;}
+    if(!dateVal){showError('Choose a move-in or move-out date.');return;}
+    var d=new Date(dateVal+'T12:00:00');
+    if(isNaN(d.getTime())){showError('Choose a valid date.');return;}
+    var daysInMonth=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();
+    var days,how;
+    if(move==='in'){days=daysInMonth-d.getDate()+1;how='From '+dateVal+' to month-end inclusive';}
+    else{days=d.getDate();how='From month-start to '+dateVal+' inclusive';}
+    var actual=rent/daysInMonth*days;
+    var thirty=rent/30*days;
+    var yearly=rent*12/365*days;
+    var params=new URLSearchParams({rent:rent,move:move,date:dateVal});
+    var url=location.pathname+'?'+params.toString();
+    history.replaceState(null,'',url);
+    shareLink.href=url;shareLink.textContent=url;share.hidden=false;
+    err.hidden=true;out.hidden=false;
+    out.innerHTML='<h3>Result — '+days+' day(s) occupied</h3>'
+      +'<p>'+how+'. Month has '+daysInMonth+' days.</p>'
+      +'<table><tr><th>Method</th><th>Calculation</th><th>Prorated rent</th></tr>'
+      +'<tr><td>Actual days</td><td>'+money(rent)+' ÷ '+daysInMonth+' × '+days+'</td><td><strong>'+money(actual)+'</strong></td></tr>'
+      +'<tr><td>30-day</td><td>'+money(rent)+' ÷ 30 × '+days+'</td><td><strong>'+money(thirty)+'</strong></td></tr>'
+      +'<tr><td>365-day</td><td>'+money(rent)+' × 12 ÷ 365 × '+days+'</td><td><strong>'+money(yearly)+'</strong></td></tr></table>'
+      +'<p>Compare these three figures with the method stated in your lease.</p>';
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();calc();});
+  document.getElementById('print-btn').addEventListener('click',function(){window.print();});
+  var q=new URLSearchParams(location.search);
+  if(q.get('rent'))document.getElementById('rent').value=q.get('rent');
+  if(q.get('move'))document.getElementById('move').value=q.get('move');
+  if(q.get('date'))document.getElementById('date').value=q.get('date');
+  if(q.get('rent')&&q.get('date'))calc();
+})();
+</script>
+</body>
+</html>
