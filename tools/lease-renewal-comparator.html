@@ -117,7 +117,7 @@
       +'<div class="table-wrap"><table><tr><th>Option</th><th>Calculation</th><th>Total</th></tr>'
       +'<tr><td>Staying (renewal)</td><td>'+money(vals.renewal)+' × '+vals.months+' months</td><td><strong>'+money(staying)+'</strong></td></tr>'
       +'<tr><td>Moving</td><td>'+money(vals.newplace)+' × '+vals.months+' + '+money(vals.moving)+' moving + '+money(vals.fees)+' fees</td><td><strong>'+money(movingTotal)+'</strong></td></tr></table></div>'
-      +'<p>Difference over '+vals.months+' months: <strong>'+money(Math.abs(saving))+'</strong> in favour of '+(saving>0?'moving':(saving<0?'staying':'neither'))+'.</p>'
+      +'<p>Difference over '+vals.months+' months: <strong>'+money(Math.abs(saving))+'</strong> in favor of '+(saving>0?'moving':(saving<0?'staying':'neither'))+'.</p>'
       +'<p>Monthly difference (renewal − new place): <strong>'+money(diff)+' per month</strong>.</p>'
       +'<p>'+breakeven+'</p>'
       +'<p>For reference, your current rent is '+money(vals.current)+' per month; the renewal is '+money(vals.renewal-vals.current)+' per month '+(vals.renewal>=vals.current?'more':'less')+' than now.</p>';

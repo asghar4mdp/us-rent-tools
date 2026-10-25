@@ -24,7 +24,7 @@
 <section class="result"><h2>Short answer</h2><p><strong>California (AB 12, Civil Code 1950.5): generally 1 month's rent (2 months for a small landlord as defined in the statute), returned within 21 calendar days. Texas (Property Code 92.103, 92.107): no statutory cap, returned within 30 days after the tenant provides a forwarding address.</strong> For every other state, the answer is Check official source.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
 <h2>Verified state deposit rules</h2>
 <div class="table-wrap"><table><tr><th>State</th><th>Verified deposit rule</th><th>Return deadline</th></tr><tr><td>California</td><td>Generally 1 month's rent; 2 months for a small landlord as defined in the statute (AB 12, Civil Code 1950.5)</td><td>21 calendar days after vacating</td></tr><tr><td>Texas</td><td>No statutory cap; the lease amount controls (Property Code 92.103, 92.107)</td><td>30 days, with the forwarding-address trigger</td></tr><tr><td>All other states</td><td>Check official source</td><td>Check official source</td></tr></table></div>
-<p>Check the maximum deposit, any overcharge, the return deadline, and the refund after itemised deductions — for <strong>California and Texas only</strong>. For every other state, the result is <strong>Check official source</strong> with no numeric cap or deadline.</p>
+<p>Check the maximum deposit, any overcharge, the return deadline, and the refund after itemized deductions — for <strong>California and Texas only</strong>. For every other state, the result is <strong>Check official source</strong> with no numeric cap or deadline.</p>
 <p class="muted">Last verified: 2026-10-25</p>
 </section>
 <div class="warning" role="note"><strong>Warning:</strong> This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</div>
@@ -42,15 +42,15 @@
 <input id="rent" name="rent" type="number" inputmode="decimal" min="0" step="0.01" required>
 <label for="deposit">Deposit charged ($)</label>
 <input id="deposit" name="deposit" type="number" inputmode="decimal" min="0" step="0.01" required>
-<label for="deductions">Itemised deductions claimed by landlord ($) — optional</label>
+<label for="deductions">Itemized deductions claimed by landlord ($) — optional</label>
 <input id="deductions" name="deductions" type="number" inputmode="decimal" min="0" step="0.01" value="0" aria-describedby="deductions-help">
-<p id="deductions-help" class="muted"><small>Enter the total of the itemised deductions. This tool only subtracts the total you enter; it does not judge whether any deduction is lawful.</small></p>
+<p id="deductions-help" class="muted"><small>Enter the total of the itemized deductions. This tool only subtracts the total you enter; it does not judge whether any deduction is lawful.</small></p>
 <label for="moveout">Move-out / vacating date</label>
 <input id="moveout" name="moveout" type="date" required>
 <fieldset>
 <legend>California small-landlord exception</legend>
-<label for="small-landlord"><input type="checkbox" id="small-landlord" name="small-landlord"> The landlord qualifies for the narrow small-landlord exception (California only)</label>
-<p class="muted"><small>Only check this if all of these are true: the landlord is a natural person, or an LLC whose members are only natural persons; owns no more than 2 properties totalling 4 units; and the tenant is not a service member. If any part is not true, leave it unchecked — the maximum is 1 month's rent.</small></p>
+<label for="small-landlord"><input type="checkbox" id="small-landlord" name="small-landlord"> Check this box only if the landlord meets the small-landlord definition in the statute (California only) — leave it unchecked unless you have confirmed the landlord qualifies</label>
+<p class="muted"><small>Only check this if all of these are true: the landlord is a natural person, or an LLC whose members are only natural persons; owns no more than 2 properties totaling 4 units; and the tenant is not a service member. If any part is not true, leave it unchecked — the maximum is 1 month's rent.</small></p>
 </fieldset>
 <label for="forwarding">Texas forwarding-address date (Texas only)</label>
 <input id="forwarding" name="forwarding" type="date" aria-describedby="forwarding-help">
@@ -64,7 +64,7 @@
 <div class="formula">
 <p><strong>California (AB 12, Civil Code 1950.5):</strong> maximum deposit = 1 × monthly rent generally; 2 × monthly rent only under the narrow small-landlord exception described above. Overcharge = deposit charged − maximum deposit (if positive). Return deadline = move-out date + 21 calendar days.</p>
 <p><strong>Texas (Property Code 92.103, 92.107):</strong> no statutory cap — the lease amount controls, so there is no overcharge figure to compute. Return deadline = forwarding-address date + 30 days. Without a forwarding-address date, no deadline can be calculated, because the duty has not been triggered on the facts entered.</p>
-<p><strong>Refund after deductions:</strong> refund = deposit charged − itemised deductions entered. No interest is calculated by this tool.</p>
+<p><strong>Refund after deductions:</strong> refund = deposit charged − itemized deductions entered. No interest is calculated by this tool.</p>
 </div>
 </section>
 <section>
@@ -81,7 +81,7 @@
 <ul>
 <li>Only California and Texas are verified for this tool. All other states return “Check official source” with no numeric cap or deadline.</li>
 <li>Texas has no statutory cap, so this tool cannot call a Texas deposit an overcharge on state law alone; the lease controls the amount.</li>
-<li>The refund figure is deposit minus the deductions total you entered. It does not judge whether deductions are lawful, documented, or itemised correctly.</li>
+<li>The refund figure is deposit minus the deductions total you entered. It does not judge whether deductions are lawful, documented, or itemized correctly.</li>
 <li>If the deposit charged exceeds the California maximum, the refund-after-deductions figure and the overcharge figure are different questions; this tool shows both separately and does not merge them into a single amount owed.</li>
 <li>No interest is calculated. No interest rule is in the verified list for this tool.</li>
 <li>Local ordinances may be stricter and may override state rules.</li>
