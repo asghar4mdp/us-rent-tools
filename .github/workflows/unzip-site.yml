@@ -1,0 +1,47 @@
+name: Unzip premium site
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rent-tools-site-publish.zip'
+      - '.github/workflows/unzip-site.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unzip and replace site
+        run: |
+          set -e
+          if [ ! -f rent-tools-site-publish.zip ]; then
+            echo "No zip file present, nothing to do."
+            exit 0
+          fi
+          unzip -o rent-tools-site-publish.zip -d extracted_site
+          ls -R extracted_site | head -n 200
+          if [ -f extracted_site/index.html ]; then
+            SRC=extracted_site
+          else
+            SRC=$(find extracted_site -maxdepth 2 -name index.html -print -quit | xargs dirname)
+            if [ -z "$SRC" ]; then
+              SRC=$(find extracted_site -mindepth 1 -maxdepth 1 -type d | head -n 1)
+            fi
+          fi
+          echo "Using source: $SRC"
+          test -f "$SRC/index.html"
+          git ls-files -z | xargs -0 rm -f
+          rm -rf assets guides pages tools || true
+          cp -a "$SRC"/. .
+          rm -rf extracted_site rent-tools-site-publish.zip .github
+          ls -la
+          test -f index.html
+          test -f sitemap.xml
+          git add -A
+          git status --short
+          git config user.name "asghar4mdp"
+          git config user.email "asghar4mdp@gmail.com"
+          git commit -m "Premium UI, 5-item menu with dropdowns, new footer, Contact Us form" || exit 0
+          git push
