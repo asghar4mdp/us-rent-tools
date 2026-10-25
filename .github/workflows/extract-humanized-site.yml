@@ -1,0 +1,28 @@
+name: Extract humanized site zip
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract zip and replace site
+        run: |
+          if [ ! -f rent-tools-site-publish.zip ]; then
+            echo "No zip to extract."
+            exit 0
+          fi
+          unzip -o rent-tools-site-publish.zip
+          rm -rf assets guides pages tools index.html README.md robots.txt sitemap.xml vercel.json
+          cp -a rent-tools-site/. .
+          rm -rf rent-tools-site rent-tools-site-publish.zip .github
+          test -f index.html
+          test -f sitemap.xml
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Humanize content, US spelling proofread, remove duplicates"
+          git push
