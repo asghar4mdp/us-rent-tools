@@ -1,0 +1,41 @@
+name: Extract audited site zip
+on:
+  push:
+    branches: [main]
+    paths:
+      - rent-tools-site-publish.zip
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract site zip to repo root
+        run: |
+          set -e
+          if [ ! -f rent-tools-site-publish.zip ]; then
+            echo "No zip found, nothing to do."
+            exit 0
+          fi
+          rm -rf extracted
+          mkdir extracted
+          unzip -o rent-tools-site-publish.zip -d extracted
+          SRC=extracted
+          TOP=$(find extracted -mindepth 1 -maxdepth 1 | head -n 1)
+          if [ "$(find extracted -mindepth 1 -maxdepth 1 | wc -l)" = "1" ] && [ -d "$TOP" ]; then
+            SRC="$TOP"
+          fi
+          if [ ! -f "$SRC/index.html" ]; then
+            echo "index.html not found in zip, aborting without changes."
+            exit 1
+          fi
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name 'extracted' -exec rm -rf {} +
+          cp -a "$SRC"/. ./
+          rm -rf extracted
+          git config user.name "asghar4mdp"
+          git config user.email "asghar4mdp@users.noreply.github.com"
+          git add -A
+          git status --short
+          git diff --cached --quiet || git commit -m "Audit fixes: 2000+ word guides, CTR meta, complete schema, canonicals"
+          git push
