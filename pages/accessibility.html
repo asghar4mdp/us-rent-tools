@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility | US Rent Tools</title><meta name="description" content="Accessibility at US Rent Tools: keyboard navigation, screen-reader support, contrast, mobile use, and how to report a barrier.">
+<link rel="canonical" href="https://us-rent-tools.vercel.app/pages/accessibility.html"><link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"Article","headline":"Accessibility","description":"Accessibility at US Rent Tools.","datePublished":"2026-10-25","dateModified":"2026-10-25","author":{"@type":"Organization","name":"US Rent Tools"}}]</script></head>
+<body><a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap"><a class="brand" href="../index.html">US Rent Tools</a><nav class="main" aria-label="Main navigation"><a href="../index.html">Home</a><a href="about.html">About</a><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button><div class="dropdown-menu" id="tools-menu"><a href="../tools/index.html">Free Tools Hub</a><a href="../tools/prorated-rent-calculator.html">Prorated Rent Calculator</a><a href="../tools/rent-increase-cap-checker.html">Rent Increase Cap Checker</a><a href="../tools/security-deposit-calculator.html">Security Deposit Calculator</a><a href="../tools/late-fee-checker.html">Late Fee Checker</a><a href="../tools/move-in-cost-calculator.html">Move-in Cost Calculator</a><a href="../tools/lease-renewal-comparator.html">Lease Renewal Comparator</a></div></div><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="guides-menu">Articles/Guides</button><div class="dropdown-menu" id="guides-menu"><a href="../guides/rent-rules-explained.html">Rent Rules Explained</a><a href="../guides/how-to-calculate-prorated-rent.html">How to Calculate Prorated Rent</a><a href="../guides/30-day-vs-actual-days-proration.html">30-Day vs Actual-Days Proration</a><a href="../guides/how-to-split-prorated-rent-with-roommates.html">How to Split Prorated Rent With Roommates</a><a href="../guides/prorated-rent-when-breaking-lease-early.html">Prorated Rent When Breaking a Lease Early</a><a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a><a href="../guides/washington-rent-cap.html">Washington Rent Cap</a><a href="../guides/how-much-security-deposit-can-landlord-charge.html">How Much Security Deposit Can a Landlord Charge?</a><a href="../guides/california-security-deposit-refund.html">California Security Deposit Refund</a><a href="../guides/california-missed-security-deposit-deadline.html">California Missed Security Deposit Deadline</a><a href="../guides/texas-security-deposit-deadline.html">Texas Security Deposit Deadline</a><a href="../guides/security-deposit-return-deadline.html">Security Deposit Return Deadline</a><a href="../guides/late-fee-grace-period.html">Late Fee Grace Period</a><a href="../guides/oregon-late-fee.html">Oregon Late Fee</a></div></div><a href="contact.html">Contact Us</a></nav></div></header>
+<div class="wrap"><main id="main"><article>
+<p><a href="../index.html">Home</a> &rsaquo; Accessibility</p>
+<h1>Accessibility</h1>
+<div class="formula"><p><strong>Short answer:</strong> US Rent Tools is built to be usable with a keyboard, a screen reader, and on a phone — with labelled inputs, visible focus, and high-contrast text. If you hit a barrier, please report it through the Contact Us form so it can be fixed.</p></div>
+<h2>What we aim for</h2>
+<ul>
+<li><strong>Keyboard navigation:</strong> menus, dropdowns, calculators, and forms can be operated without a mouse. Dropdown menus open on hover, focus, or click, and close with Escape or when focus leaves the menu.</li>
+<li><strong>Screen readers:</strong> pages use semantic headings, landmarks, labelled form fields, and descriptive link text. Calculator results and form errors are announced with live regions where applicable.</li>
+<li><strong>Contrast and text:</strong> body text uses a dark navy on white, with large, scalable type. Text can be resized in your browser without breaking the layout.</li>
+<li><strong>Mobile:</strong> layouts stack on small screens, inputs are full-width, and tap targets are large enough to use comfortably.</li>
+<li><strong>No unnecessary motion:</strong> the site avoids auto-playing media and flashing content. The Free Tools Hub tagline rotates slowly and is announced politely, not as a flashing banner.</li>
+</ul>
+<h2>Known limits</h2>
+<p>Some older state-rule tables are wide on very small screens; they scroll horizontally rather than shrinking text below a readable size. Calculator results are shown as text and tables, not as images of text, so they can be read by assistive technology and copied.</p>
+<h2>Report a barrier</h2>
+<p>If a page, calculator, or form is hard to use with your device or assistive technology, please use the <a href="contact.html">Contact Us form</a> and choose “Accessibility issue” as the subject. Include the page address, the device or tool you were using, and what happened. No contact email is published on this site, so the form is the way to report a barrier — it prepares your message for you to send from your own email app, as explained on that page.</p>
+<p><small>Last updated: 2026-10-25.</small></p>
+</article></main></div><footer class="site"><div class="wrap"><nav aria-label="Footer"><a href="about.html">About Us</a><span aria-hidden="true"> | </span><a href="editorial-policy.html">Editorial Policy</a><span aria-hidden="true"> | </span><a href="contact.html">Contact Support</a><span aria-hidden="true"> | </span><a href="privacy.html">Privacy Policy</a><span aria-hidden="true"> | </span><a href="terms.html">Terms of Service</a><span aria-hidden="true"> | </span><a href="disclaimer.html">Legal Disclaimer</a><span aria-hidden="true"> | </span><a href="cookie-policy.html">Cookie Protocol</a><span aria-hidden="true"> | </span><a href="accessibility.html">Accessibility</a><span aria-hidden="true"> | </span><a href="../sitemap.xml">Sitemap</a></nav><p>US Rent Tools — independent calculator site. General information only, not legal advice.</p></div></footer>
+<script>
+(function(){
+  var dropdowns=document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function(dd){
+    var btn=dd.querySelector(".dropbtn");
+    if(!btn) return;
+    var clickOpened=false;
+    function openMenu(){dd.classList.add("open");btn.setAttribute("aria-expanded","true");}
+    function closeMenu(){dd.classList.remove("open");btn.setAttribute("aria-expanded","false");clickOpened=false;}
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      if(clickOpened){closeMenu();}
+      else {
+        dropdowns.forEach(function(o){if(o!==dd){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");}});
+        clickOpened=true; openMenu();
+      }
+    });
+    dd.addEventListener("mouseenter",function(){openMenu();});
+    dd.addEventListener("mouseleave",function(){if(!clickOpened){closeMenu();}});
+    dd.addEventListener("focusin",function(){openMenu();});
+    dd.addEventListener("focusout",function(e){
+      if(!dd.contains(e.relatedTarget) && !clickOpened){closeMenu();}
+    });
+    dd.addEventListener("keydown",function(e){
+      if(e.key==="Escape"){closeMenu();btn.focus();}
+    });
+  });
+  document.addEventListener("click",function(){
+    dropdowns.forEach(function(o){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");});
+  });
+})();
+</script>
+</body></html>
