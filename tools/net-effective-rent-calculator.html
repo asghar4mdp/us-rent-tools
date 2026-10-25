@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Net Effective Rent Calculator — US Rent Tools</title>
+<meta name="description" content="Work out effective monthly rent after free months and concessions: (total face rent minus concessions) divided by lease term.">
+<link rel="canonical" href="https://us-rent-tools.vercel.app/tools/net-effective-rent-calculator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Net Effective Rent Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://us-rent-tools.vercel.app/"},
+{"@type":"ListItem","position":2,"name":"Net Effective Rent Calculator","item":"https://us-rent-tools.vercel.app/tools/net-effective-rent-calculator.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is net effective rent what I pay each month?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is the average monthly cost across the lease after concessions. In non-free months you pay the face rent."}},{"@type": "Question", "name": "What counts as a concession?", "acceptedAnswer": {"@type": "Answer", "text": "Free months, waived fees, cash credits, and similar incentives stated in the lease or offer. Enter only concessions the lease actually grants."}},{"@type": "Question", "name": "Why do landlords advertise effective rent?", "acceptedAnswer": {"@type": "Answer", "text": "Because it makes a lease with concessions look cheaper than a straightforward lease at the face rent. Comparing effective rents side by side is fairer — but always check the face rent too."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../pages/about.html">About</a><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button><div class="dropdown-menu" id="tools-menu"><a href="index.html">Free Tools Hub</a><a href="prorated-rent-calculator.html">Prorated Rent Calculator</a><a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a><a href="security-deposit-calculator.html">Security Deposit Calculator</a><a href="late-fee-checker.html">Late Fee Checker</a><a href="move-in-cost-calculator.html">Move-in Cost Calculator</a><a href="lease-renewal-comparator.html">Lease Renewal Comparator</a><a href="three-times-rent-calculator.html">3x Rent Calculator</a><a href="mid-term-rental-calculator.html">Mid-Term Rental Calculator</a><a href="quarterly-rent-calculator.html">Quarterly Rent Calculator</a><a href="rent-compare-calculator.html">Rent Compare Calculator</a><a href="rent-per-square-foot-calculator.html">Rent per Square Foot Calculator</a><a href="rent-affordability-calculator.html">Rent Affordability Calculator</a><a href="net-effective-rent-calculator.html">Net Effective Rent Calculator</a><a href="rent-increase-percentage-calculator.html">Rent Increase Percentage Calculator</a></div></div><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="guides-menu">Articles/Guides</button><div class="dropdown-menu" id="guides-menu"><a href="../guides/rent-rules-explained.html">Rent Rules Explained</a><a href="../guides/how-to-calculate-prorated-rent.html">How to Calculate Prorated Rent</a><a href="../guides/30-day-vs-actual-days-proration.html">30-Day vs Actual-Days Proration</a><a href="../guides/how-to-split-prorated-rent-with-roommates.html">How to Split Prorated Rent With Roommates</a><a href="../guides/prorated-rent-when-breaking-lease-early.html">Prorated Rent When Breaking a Lease Early</a><a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a><a href="../guides/washington-rent-cap.html">Washington Rent Cap</a><a href="../guides/how-much-security-deposit-can-landlord-charge.html">How Much Security Deposit Can a Landlord Charge?</a><a href="../guides/california-security-deposit-refund.html">California Security Deposit Refund</a><a href="../guides/california-missed-security-deposit-deadline.html">California Missed Security Deposit Deadline</a><a href="../guides/texas-security-deposit-deadline.html">Texas Security Deposit Deadline</a><a href="../guides/security-deposit-return-deadline.html">Security Deposit Return Deadline</a><a href="../guides/late-fee-grace-period.html">Late Fee Grace Period</a><a href="../guides/oregon-late-fee.html">Oregon Late Fee</a><a href="../guides/three-times-rent-rule-explained.html">3x Rent Rule Explained</a><a href="../guides/rent-affordability-30-percent-rule.html">Rent Affordability and the 30% Rule</a><a href="../guides/mid-term-vs-short-term-vs-long-term-rentals.html">Mid-Term vs Short-Term vs Long-Term Rentals</a><a href="../guides/rent-per-square-foot-explained.html">Rent per Square Foot Explained</a><a href="../guides/net-effective-rent-vs-gross-rent.html">Net Effective Rent vs Gross Rent</a><a href="../guides/first-and-last-month-rent-explained.html">First and Last Month's Rent Explained</a></div></div><a href="../pages/contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<nav aria-label="Breadcrumb"><p><a href="../index.html">Home</a> &gt; Net Effective Rent Calculator</p></nav>
+<h1>Net Effective Rent Calculator</h1>
+<section class="result"><h2>Short answer</h2><p>Effective rent spreads concessions across the whole lease. <strong>Example: $2,000 face rent, 12 months, one free month ($2,000 concession) = ($24,000 − $2,000) ÷ 12 = $1,833.33 effective rent per month.</strong> You still pay $2,000 in the months that are not free — the effective figure is an average, not a monthly bill.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<p>A listing that advertises a low effective rent may still charge a higher face rent each month, with the discount delivered as free months or a one-off concession. Net effective rent makes that deal comparable with a straightforward lease at a single monthly figure — but it must not be mistaken for the amount due each month.</p>
+<p class="warning">This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</p>
+<div class="tool" aria-labelledby="calc-heading">
+<h2 id="calc-heading">Calculate net effective rent</h2>
+<form id="form" novalidate>
+<label for="face">Face monthly rent ($) — the rent stated in the lease</label>
+<input id="face" name="face" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="term">Lease term (months)</label>
+<input id="term" name="term" type="number" min="1" step="1" value="12">
+<label for="free">Free months (number)</label>
+<input id="free" name="free" type="number" min="0" step="1" value="0">
+<label for="conc">Other concession value ($) — e.g. gift card, fee waiver, cash credit</label>
+<input id="conc" name="conc" type="number" inputmode="decimal" min="0" step="0.01" value="0">
+<p id="error" role="alert" hidden></p>
+<button type="submit">Calculate</button>
+</form>
+<div class="result" id="result" hidden></div>
+</div>
+<section class="formula">
+<h2>Formula</h2>
+<p><strong>Gross total:</strong> face monthly rent × lease term. <strong>Total concessions:</strong> (free months × face rent) + other concession value. <strong>Net effective rent:</strong> (gross total − total concessions) ÷ lease term.</p>
+</section>
+<section class="example">
+<h2>Worked example</h2>
+<p>Face rent $2,000, 12 months, 1 free month, no other concession. Gross total: $2,000 × 12 = $24,000. Concessions: 1 × $2,000 = $2,000. Net total: $22,000. Net effective rent: $22,000 ÷ 12 = <strong>$1,833.33</strong> per month. In the 11 non-free months the tenant still pays $2,000.</p>
+</section>
+<h2>Limitations</h2>
+<ul><li>Effective rent is an average. It does not change the monthly amount actually due, the timing of free months, or whether a concession is forfeited if the lease ends early — check the lease.</li><li>Concessions that are not cash-equivalent (for example, a service or amenity) may be valued differently by different parties; only enter a value you can support from the lease or offer.</li><li>This tool does not account for rent increases during the term, fees, or utilities.</li></ul>
+<h2>Sources</h2>
+<ul><li>No state net-effective-rent law is asserted on this page; the calculation follows the lease's face rent and stated concessions.</li><li>See the companion guide: <a href="../guides/net-effective-rent-vs-gross-rent.html">Net Effective Rent vs Gross Rent</a>.</li></ul>
+<p><small>Last verified: 2026-10-25.</small></p>
+<p>Next step: read <a href="../guides/net-effective-rent-vs-gross-rent.html">net effective rent vs gross rent</a>, or compare two rentals in full with the <a href="rent-compare-calculator.html">Rent Compare Calculator</a>.</p>
+<h2>Frequently asked questions</h2><h3>Is net effective rent what I pay each month?</h3><p>No. It is the average monthly cost across the lease after concessions. In non-free months you pay the face rent.</p><h3>What counts as a concession?</h3><p>Free months, waived fees, cash credits, and similar incentives stated in the lease or offer. Enter only concessions the lease actually grants.</p><h3>Why do landlords advertise effective rent?</h3><p>Because it makes a lease with concessions look cheaper than a straightforward lease at the face rent. Comparing effective rents side by side is fairer — but always check the face rent too.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap"><nav aria-label="Footer"><a href="../pages/about.html">About Us</a><span aria-hidden="true"> | </span><a href="../pages/editorial-policy.html">Editorial Policy</a><span aria-hidden="true"> | </span><a href="../pages/contact.html">Contact Support</a><span aria-hidden="true"> | </span><a href="../pages/privacy.html">Privacy Policy</a><span aria-hidden="true"> | </span><a href="../pages/terms.html">Terms of Service</a><span aria-hidden="true"> | </span><a href="../pages/disclaimer.html">Legal Disclaimer</a><span aria-hidden="true"> | </span><a href="../pages/cookie-policy.html">Cookie Protocol</a><span aria-hidden="true"> | </span><a href="../pages/accessibility.html">Accessibility</a><span aria-hidden="true"> | </span><a href="../sitemap.xml">Sitemap</a></nav><p>US Rent Tools — independent calculator site. General information only, not legal advice.</p></div></footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var err=document.getElementById('error');
+  var out=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2);}
+  function showError(msg){err.textContent=msg;err.hidden=false;out.hidden=true;}
+  function get(id){return parseFloat(document.getElementById(id).value);}
+  function calc(){
+    var face=get('face'); var term=parseFloat(document.getElementById('term').value);
+    var free=parseFloat(document.getElementById('free').value)||0; var conc=get('conc')||0;
+    if(isNaN(face)||face<0){showError('Enter a face monthly rent of $0 or more.');return;}
+    if(isNaN(term)||term<1){showError('Lease term must be at least 1 month.');return;}
+    if(isNaN(free)||free<0||free>=term){showError('Free months must be 0 or more and fewer than the lease term.');return;}
+    if(isNaN(conc)||conc<0){showError('Concession value cannot be negative.');return;}
+    var gross=face*term, concessions=free*face+conc, net=gross-concessions, eff=net/term;
+    err.hidden=true; out.hidden=false;
+    out.innerHTML='<h3>Result</h3><p>Gross (face) total: <strong>'+money(gross)+'</strong> ('+money(face)+' × '+term+').</p>'
+      +'<p>Total concessions: <strong>'+money(concessions)+'</strong> ('+free+' free month(s) × '+money(face)+' + '+money(conc)+').</p>'
+      +'<p>Net total: <strong>'+money(net)+'</strong>. Net effective rent: <strong>'+money(eff)+'</strong> per month ('+money(net)+' ÷ '+term+').</p>'
+      +'<p>You still pay '+money(face)+' in each non-free month. The effective figure is the average across the lease, not a monthly bill.</p>';
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();calc();});
+})();
+</script>
+
+<script>
+(function(){
+  var dropdowns=document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function(dd){
+    var btn=dd.querySelector(".dropbtn");
+    if(!btn) return;
+    var clickOpened=false;
+    function openMenu(){dd.classList.add("open");btn.setAttribute("aria-expanded","true");}
+    function closeMenu(){dd.classList.remove("open");btn.setAttribute("aria-expanded","false");clickOpened=false;}
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      if(clickOpened){closeMenu();}
+      else {
+        dropdowns.forEach(function(o){if(o!==dd){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");}});
+        clickOpened=true; openMenu();
+      }
+    });
+    dd.addEventListener("mouseenter",function(){openMenu();});
+    dd.addEventListener("mouseleave",function(){if(!clickOpened){closeMenu();}});
+    dd.addEventListener("focusin",function(){openMenu();});
+    dd.addEventListener("focusout",function(e){
+      if(!dd.contains(e.relatedTarget) && !clickOpened){closeMenu();}
+    });
+    dd.addEventListener("keydown",function(e){
+      if(e.key==="Escape"){closeMenu();btn.focus();}
+    });
+  });
+  document.addEventListener("click",function(){
+    dropdowns.forEach(function(o){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");});
+  });
+})();
+</script>
+
+</body>
+</html>

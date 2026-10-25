@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent Increase Percentage Calculator — US Rent Tools</title>
+<meta name="description" content="Pure maths: from old rent to new rent, the dollar change and the percentage change — with a clear link to the legal cap checker.">
+<link rel="canonical" href="https://us-rent-tools.vercel.app/tools/rent-increase-percentage-calculator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rent Increase Percentage Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://us-rent-tools.vercel.app/"},
+{"@type":"ListItem","position":2,"name":"Rent Increase Percentage Calculator","item":"https://us-rent-tools.vercel.app/tools/rent-increase-percentage-calculator.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is an 8% increase automatically legal?", "acceptedAnswer": {"@type": "Answer", "text": "No. The percentage is maths; legality depends on caps, exemptions, notice, and local rules. An increase within a cap can still fail on notice, and an increase above a cap is not saved by being a small percentage."}},{"@type": "Question", "name": "How is this different from the Rent Increase Cap Checker?", "acceptedAnswer": {"@type": "Answer", "text": "This page calculates the percentage only. The Cap Checker compares a proposed increase against verified state caps and returns Allowed, Capped, or Check official source."}},{"@type": "Question", "name": "What if rent went down?", "acceptedAnswer": {"@type": "Answer", "text": "The same formula gives a negative percentage — a decrease. The calculator labels it as a decrease rather than an increase."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../pages/about.html">About</a><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button><div class="dropdown-menu" id="tools-menu"><a href="index.html">Free Tools Hub</a><a href="prorated-rent-calculator.html">Prorated Rent Calculator</a><a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a><a href="security-deposit-calculator.html">Security Deposit Calculator</a><a href="late-fee-checker.html">Late Fee Checker</a><a href="move-in-cost-calculator.html">Move-in Cost Calculator</a><a href="lease-renewal-comparator.html">Lease Renewal Comparator</a><a href="three-times-rent-calculator.html">3x Rent Calculator</a><a href="mid-term-rental-calculator.html">Mid-Term Rental Calculator</a><a href="quarterly-rent-calculator.html">Quarterly Rent Calculator</a><a href="rent-compare-calculator.html">Rent Compare Calculator</a><a href="rent-per-square-foot-calculator.html">Rent per Square Foot Calculator</a><a href="rent-affordability-calculator.html">Rent Affordability Calculator</a><a href="net-effective-rent-calculator.html">Net Effective Rent Calculator</a><a href="rent-increase-percentage-calculator.html">Rent Increase Percentage Calculator</a></div></div><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="guides-menu">Articles/Guides</button><div class="dropdown-menu" id="guides-menu"><a href="../guides/rent-rules-explained.html">Rent Rules Explained</a><a href="../guides/how-to-calculate-prorated-rent.html">How to Calculate Prorated Rent</a><a href="../guides/30-day-vs-actual-days-proration.html">30-Day vs Actual-Days Proration</a><a href="../guides/how-to-split-prorated-rent-with-roommates.html">How to Split Prorated Rent With Roommates</a><a href="../guides/prorated-rent-when-breaking-lease-early.html">Prorated Rent When Breaking a Lease Early</a><a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a><a href="../guides/washington-rent-cap.html">Washington Rent Cap</a><a href="../guides/how-much-security-deposit-can-landlord-charge.html">How Much Security Deposit Can a Landlord Charge?</a><a href="../guides/california-security-deposit-refund.html">California Security Deposit Refund</a><a href="../guides/california-missed-security-deposit-deadline.html">California Missed Security Deposit Deadline</a><a href="../guides/texas-security-deposit-deadline.html">Texas Security Deposit Deadline</a><a href="../guides/security-deposit-return-deadline.html">Security Deposit Return Deadline</a><a href="../guides/late-fee-grace-period.html">Late Fee Grace Period</a><a href="../guides/oregon-late-fee.html">Oregon Late Fee</a><a href="../guides/three-times-rent-rule-explained.html">3x Rent Rule Explained</a><a href="../guides/rent-affordability-30-percent-rule.html">Rent Affordability and the 30% Rule</a><a href="../guides/mid-term-vs-short-term-vs-long-term-rentals.html">Mid-Term vs Short-Term vs Long-Term Rentals</a><a href="../guides/rent-per-square-foot-explained.html">Rent per Square Foot Explained</a><a href="../guides/net-effective-rent-vs-gross-rent.html">Net Effective Rent vs Gross Rent</a><a href="../guides/first-and-last-month-rent-explained.html">First and Last Month's Rent Explained</a></div></div><a href="../pages/contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<nav aria-label="Breadcrumb"><p><a href="../index.html">Home</a> &gt; Rent Increase Percentage Calculator</p></nav>
+<h1>Rent Increase Percentage Calculator</h1>
+<section class="result"><h2>Short answer</h2><p>This is pure maths, not a legal ruling. <strong>Example: $1,800 to $1,950 = a $150 increase, which is 8.33% ($150 ÷ $1,800 × 100).</strong> A percentage increase is not the same as a legal increase: whether the increase is lawful depends on caps, exemptions, notice, and local rules — use the <a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a> for the legality check in CA and WA.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<p>Landlords, tenants, and notices all talk about rent increases in percentages, but the percentage alone says nothing about legality. This calculator does one job — the arithmetic — and points you to the Cap Checker for the legal question. Do not use this page to decide whether an increase is allowed.</p>
+<p class="warning">This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</p>
+<div class="tool" aria-labelledby="calc-heading">
+<h2 id="calc-heading">Calculate a rent increase percentage</h2>
+<form id="form" novalidate>
+<label for="old">Old monthly rent ($)</label>
+<input id="old" name="old" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="new">New monthly rent ($)</label>
+<input id="new" name="new" type="number" inputmode="decimal" min="0" step="0.01" required>
+<p id="error" role="alert" hidden></p>
+<button type="submit">Calculate</button>
+</form>
+<div class="result" id="result" hidden></div>
+</div>
+<section class="formula">
+<h2>Formula</h2>
+<p><strong>Dollar change:</strong> new rent − old rent. <strong>Percentage change:</strong> (new rent − old rent) ÷ old rent × 100%.</p>
+</section>
+<section class="example">
+<h2>Worked example</h2>
+<p>Old rent $1,800, new rent $1,950. Dollar change: $1,950 − $1,800 = <strong>$150</strong>. Percentage change: $150 ÷ $1,800 × 100 = <strong>8.33%</strong>. Whether an 8.33% increase is lawful is a separate question for the Cap Checker and the official source — this page only establishes that the increase is 8.33%.</p>
+</section>
+<h2>Limitations</h2>
+<ul><li>This page performs no legality check. Caps (CA, WA), exemptions, notice periods, lease terms, and city ordinances can all affect whether an increase is lawful.</li><li>A percentage based on a wrong old rent is wrong: use the rent actually in force before the increase, not a listed or advertised figure.</li><li>For the legality check, use the <a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a>; for other states, check the official source.</li></ul>
+<h2>Sources</h2>
+<ul><li>Verified caps cited for cross-reference only: CA AB 1482 cap min(5% + CPI, 10%); WA HB 1217 / RCW 59.18.700 cap min(7% + CPI, 10%) with no increase in the first 12 months. The cap check itself lives on the <a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a>.</li><li>For the legal background, see <a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a> and <a href="../guides/rent-rules-explained.html">Rent Rules Explained</a>.</li></ul>
+<p><small>Last verified: 2026-10-25.</small></p>
+<p>Next step: check legality with the <a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a>, or read <a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a>.</p>
+<h2>Frequently asked questions</h2><h3>Is an 8% increase automatically legal?</h3><p>No. The percentage is maths; legality depends on caps, exemptions, notice, and local rules. An increase within a cap can still fail on notice, and an increase above a cap is not saved by being a small percentage.</p><h3>How is this different from the Rent Increase Cap Checker?</h3><p>This page calculates the percentage only. The Cap Checker compares a proposed increase against verified state caps and returns Allowed, Capped, or Check official source.</p><h3>What if rent went down?</h3><p>The same formula gives a negative percentage — a decrease. The calculator labels it as a decrease rather than an increase.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap"><nav aria-label="Footer"><a href="../pages/about.html">About Us</a><span aria-hidden="true"> | </span><a href="../pages/editorial-policy.html">Editorial Policy</a><span aria-hidden="true"> | </span><a href="../pages/contact.html">Contact Support</a><span aria-hidden="true"> | </span><a href="../pages/privacy.html">Privacy Policy</a><span aria-hidden="true"> | </span><a href="../pages/terms.html">Terms of Service</a><span aria-hidden="true"> | </span><a href="../pages/disclaimer.html">Legal Disclaimer</a><span aria-hidden="true"> | </span><a href="../pages/cookie-policy.html">Cookie Protocol</a><span aria-hidden="true"> | </span><a href="../pages/accessibility.html">Accessibility</a><span aria-hidden="true"> | </span><a href="../sitemap.xml">Sitemap</a></nav><p>US Rent Tools — independent calculator site. General information only, not legal advice.</p></div></footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var err=document.getElementById('error');
+  var out=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2);}
+  function showError(msg){err.textContent=msg;err.hidden=false;out.hidden=true;}
+  function get(id){return parseFloat(document.getElementById(id).value);}
+  function calc(){
+    var oldR=get('old'); var newR=get('new');
+    if(isNaN(oldR)||oldR<=0){showError('Old rent must be more than $0.');return;}
+    if(isNaN(newR)||newR<0){showError('Enter a new rent of $0 or more.');return;}
+    var change=newR-oldR, pct=change/oldR*100;
+    var dir = change>0 ? 'increase' : (change<0 ? 'decrease' : 'no change');
+    err.hidden=true; out.hidden=false;
+    out.innerHTML='<h3>Result</h3><p>Dollar change: <strong>'+money(change)+'</strong> ('+money(newR)+' − '+money(oldR)+').</p>'
+      +'<p>Percentage change: <strong>'+pct.toFixed(2)+'%</strong> ('+money(change)+' ÷ '+money(oldR)+' × 100) — a '+dir+'.</p>'
+      +'<p><strong>This percentage is not a legal ruling.</strong> Check legality with the <a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a> (CA: min(5% + CPI, 10%); WA: min(7% + CPI, 10%) with no increase in the first 12 months; everywhere else: check the official source).</p>';
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();calc();});
+})();
+</script>
+
+<script>
+(function(){
+  var dropdowns=document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function(dd){
+    var btn=dd.querySelector(".dropbtn");
+    if(!btn) return;
+    var clickOpened=false;
+    function openMenu(){dd.classList.add("open");btn.setAttribute("aria-expanded","true");}
+    function closeMenu(){dd.classList.remove("open");btn.setAttribute("aria-expanded","false");clickOpened=false;}
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      if(clickOpened){closeMenu();}
+      else {
+        dropdowns.forEach(function(o){if(o!==dd){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");}});
+        clickOpened=true; openMenu();
+      }
+    });
+    dd.addEventListener("mouseenter",function(){openMenu();});
+    dd.addEventListener("mouseleave",function(){if(!clickOpened){closeMenu();}});
+    dd.addEventListener("focusin",function(){openMenu();});
+    dd.addEventListener("focusout",function(e){
+      if(!dd.contains(e.relatedTarget) && !clickOpened){closeMenu();}
+    });
+    dd.addEventListener("keydown",function(e){
+      if(e.key==="Escape"){closeMenu();btn.focus();}
+    });
+  });
+  document.addEventListener("click",function(){
+    dropdowns.forEach(function(o){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");});
+  });
+})();
+</script>
+
+</body>
+</html>

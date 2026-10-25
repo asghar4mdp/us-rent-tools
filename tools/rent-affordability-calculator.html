@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rent Affordability Calculator — US Rent Tools</title>
+<meta name="description" content="Work out the maximum affordable rent from your income at the 30% rule, 2.5x, and 3x, and check a rent you enter against your income. Renter-only — no mortgage affordability.">
+<link rel="canonical" href="https://us-rent-tools.vercel.app/tools/rent-affordability-calculator.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Rent Affordability Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://us-rent-tools.vercel.app/"},
+{"@type":"ListItem","position":2,"name":"Rent Affordability Calculator","item":"https://us-rent-tools.vercel.app/tools/rent-affordability-calculator.html"}]}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the 30% rule?", "acceptedAnswer": {"@type": "Answer", "text": "Housing costs should be no more than 30% of gross household income. Above 30% a household is often described as cost-burdened in housing guidance."}},{"@type": "Question", "name": "Why do 2.5x and 3x give different maxima?", "acceptedAnswer": {"@type": "Answer", "text": "They are different landlord screening multiples inverted: dividing income by a smaller multiple (2.5) gives a larger maximum rent than dividing by 3."}},{"@type": "Question", "name": "Gross or net income — which should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Landlord tests normally use gross income. For your own budgeting, the net-income figure is the more honest cash test, because tax and deductions are already gone."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="../index.html">US Rent Tools</a>
+<nav class="main" aria-label="Main navigation"><a href="../index.html">Home</a><a href="../pages/about.html">About</a><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="tools-menu">Tools</button><div class="dropdown-menu" id="tools-menu"><a href="index.html">Free Tools Hub</a><a href="prorated-rent-calculator.html">Prorated Rent Calculator</a><a href="rent-increase-cap-checker.html">Rent Increase Cap Checker</a><a href="security-deposit-calculator.html">Security Deposit Calculator</a><a href="late-fee-checker.html">Late Fee Checker</a><a href="move-in-cost-calculator.html">Move-in Cost Calculator</a><a href="lease-renewal-comparator.html">Lease Renewal Comparator</a><a href="three-times-rent-calculator.html">3x Rent Calculator</a><a href="mid-term-rental-calculator.html">Mid-Term Rental Calculator</a><a href="quarterly-rent-calculator.html">Quarterly Rent Calculator</a><a href="rent-compare-calculator.html">Rent Compare Calculator</a><a href="rent-per-square-foot-calculator.html">Rent per Square Foot Calculator</a><a href="rent-affordability-calculator.html">Rent Affordability Calculator</a><a href="net-effective-rent-calculator.html">Net Effective Rent Calculator</a><a href="rent-increase-percentage-calculator.html">Rent Increase Percentage Calculator</a></div></div><div class="dropdown"><button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="guides-menu">Articles/Guides</button><div class="dropdown-menu" id="guides-menu"><a href="../guides/rent-rules-explained.html">Rent Rules Explained</a><a href="../guides/how-to-calculate-prorated-rent.html">How to Calculate Prorated Rent</a><a href="../guides/30-day-vs-actual-days-proration.html">30-Day vs Actual-Days Proration</a><a href="../guides/how-to-split-prorated-rent-with-roommates.html">How to Split Prorated Rent With Roommates</a><a href="../guides/prorated-rent-when-breaking-lease-early.html">Prorated Rent When Breaking a Lease Early</a><a href="../guides/is-my-rent-increase-legal.html">Is My Rent Increase Legal?</a><a href="../guides/washington-rent-cap.html">Washington Rent Cap</a><a href="../guides/how-much-security-deposit-can-landlord-charge.html">How Much Security Deposit Can a Landlord Charge?</a><a href="../guides/california-security-deposit-refund.html">California Security Deposit Refund</a><a href="../guides/california-missed-security-deposit-deadline.html">California Missed Security Deposit Deadline</a><a href="../guides/texas-security-deposit-deadline.html">Texas Security Deposit Deadline</a><a href="../guides/security-deposit-return-deadline.html">Security Deposit Return Deadline</a><a href="../guides/late-fee-grace-period.html">Late Fee Grace Period</a><a href="../guides/oregon-late-fee.html">Oregon Late Fee</a><a href="../guides/three-times-rent-rule-explained.html">3x Rent Rule Explained</a><a href="../guides/rent-affordability-30-percent-rule.html">Rent Affordability and the 30% Rule</a><a href="../guides/mid-term-vs-short-term-vs-long-term-rentals.html">Mid-Term vs Short-Term vs Long-Term Rentals</a><a href="../guides/rent-per-square-foot-explained.html">Rent per Square Foot Explained</a><a href="../guides/net-effective-rent-vs-gross-rent.html">Net Effective Rent vs Gross Rent</a><a href="../guides/first-and-last-month-rent-explained.html">First and Last Month's Rent Explained</a></div></div><a href="../pages/contact.html">Contact Us</a></nav>
+</div></header>
+<div class="wrap"><main id="main">
+<article>
+<nav aria-label="Breadcrumb"><p><a href="../index.html">Home</a> &gt; Rent Affordability Calculator</p></nav>
+<h1>Rent Affordability Calculator</h1>
+<section class="result"><h2>Short answer</h2><p>Three common affordability tests, side by side. <strong>Example: $6,000 gross monthly income gives a maximum of $1,800 at the 30% rule ($6,000 × 30%), $2,400 at 2.5x ($6,000 ÷ 2.5), and $2,000 at 3x ($6,000 ÷ 3).</strong> A rent of $2,100 would be 35% of that income — above the 30% rule and above the 3x limit, though within 2.5x. This tool is for renters only; it does not calculate mortgage affordability.</p><p><small>Last verified: 2026-10-25. This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</small></p></section>
+<p>Affordability rules are rules of thumb, not laws. The 30% rule says housing should cost no more than 30% of gross income. The income-multiple rules invert the landlord tests: divide income by 2.5 or 3 to get a maximum rent. Seeing all three together shows why two renters with the same income can get different answers from different rules.</p>
+<p class="warning">This is general information, not legal advice. City ordinances may be stricter and may override state rules. Check the official source for your city and state before acting.</p>
+<div class="tool" aria-labelledby="calc-heading">
+<h2 id="calc-heading">How much rent can you afford?</h2>
+<form id="form" novalidate>
+<label for="gross">Gross monthly income ($)</label>
+<input id="gross" name="gross" type="number" inputmode="decimal" min="0" step="0.01" required>
+<label for="net">Net (take-home) monthly income ($) — optional</label>
+<input id="net" name="net" type="number" inputmode="decimal" min="0" step="0.01">
+<label for="rent">Rent to check ($) — optional</label>
+<input id="rent" name="rent" type="number" inputmode="decimal" min="0" step="0.01">
+<p id="error" role="alert" hidden></p>
+<button type="submit">Calculate</button>
+</form>
+<div class="result" id="result" hidden></div>
+</div>
+<section class="formula">
+<h2>Formula</h2>
+<p><strong>30% rule:</strong> maximum rent = gross monthly income × 30%. <strong>2.5x:</strong> maximum rent = gross monthly income ÷ 2.5. <strong>3x:</strong> maximum rent = gross monthly income ÷ 3. <strong>Rent-to-income ratio:</strong> rent ÷ gross monthly income × 100%.</p>
+</section>
+<section class="example">
+<h2>Worked example</h2>
+<p>Gross monthly income $6,000. 30% rule: $6,000 × 30% = <strong>$1,800</strong>. 2.5x: $6,000 ÷ 2.5 = <strong>$2,400</strong>. 3x: $6,000 ÷ 3 = <strong>$2,000</strong>. Rent check for $2,100: $2,100 ÷ $6,000 = <strong>35%</strong> — above the 30% rule, above the 3x maximum of $2,000, but within the 2.5x maximum of $2,400. Different rules, different answers: that is why all three are shown.</p>
+</section>
+<h2>Limitations</h2>
+<ul><li>These are rules of thumb, not legal limits and not a lender or landlord decision. A landlord may apply a different test, and a renter's other debts and costs matter too.</li><li>Gross-income tests can overstate what is comfortable to pay; the optional net-income 30% figure is the stricter cash view.</li><li>This tool covers renting only. It does not calculate mortgage affordability, home-loan qualification, or buying costs.</li></ul>
+<h2>Sources</h2>
+<ul><li>No affordability law is asserted on this page; the 30% rule and income multiples are widely used rules of thumb.</li><li>See the companion guide: <a href="../guides/rent-affordability-30-percent-rule.html">Rent Affordability and the 30% Rule</a>.</li></ul>
+<p><small>Last verified: 2026-10-25.</small></p>
+<p>Next step: read <a href="../guides/rent-affordability-30-percent-rule.html">rent affordability and the 30% rule</a>, or check a landlord multiple with the <a href="three-times-rent-calculator.html">3x Rent Calculator</a>.</p>
+<h2>Frequently asked questions</h2><h3>What is the 30% rule?</h3><p>Housing costs should be no more than 30% of gross household income. Above 30% a household is often described as cost-burdened in housing guidance.</p><h3>Why do 2.5x and 3x give different maxima?</h3><p>They are different landlord screening multiples inverted: dividing income by a smaller multiple (2.5) gives a larger maximum rent than dividing by 3.</p><h3>Gross or net income — which should I use?</h3><p>Landlord tests normally use gross income. For your own budgeting, the net-income figure is the more honest cash test, because tax and deductions are already gone.</p>
+</article>
+</main>
+<footer class="site"><div class="wrap"><nav aria-label="Footer"><a href="../pages/about.html">About Us</a><span aria-hidden="true"> | </span><a href="../pages/editorial-policy.html">Editorial Policy</a><span aria-hidden="true"> | </span><a href="../pages/contact.html">Contact Support</a><span aria-hidden="true"> | </span><a href="../pages/privacy.html">Privacy Policy</a><span aria-hidden="true"> | </span><a href="../pages/terms.html">Terms of Service</a><span aria-hidden="true"> | </span><a href="../pages/disclaimer.html">Legal Disclaimer</a><span aria-hidden="true"> | </span><a href="../pages/cookie-policy.html">Cookie Protocol</a><span aria-hidden="true"> | </span><a href="../pages/accessibility.html">Accessibility</a><span aria-hidden="true"> | </span><a href="../sitemap.xml">Sitemap</a></nav><p>US Rent Tools — independent calculator site. General information only, not legal advice.</p></div></footer>
+</div>
+<script>
+(function(){
+  var form=document.getElementById('form');
+  var err=document.getElementById('error');
+  var out=document.getElementById('result');
+  function money(n){return '$'+n.toFixed(2);}
+  function showError(msg){err.textContent=msg;err.hidden=false;out.hidden=true;}
+  function get(id){return parseFloat(document.getElementById(id).value);}
+  function calc(){
+    var gross=get('gross'); var net=get('net'); var rent=get('rent');
+    if(isNaN(gross)||gross<=0){showError('Enter a gross monthly income above $0.');return;}
+    if(!isNaN(net)&&net<0){showError('Net income cannot be negative.');return;}
+    if(!isNaN(rent)&&rent<0){showError('Rent to check cannot be negative.');return;}
+    var html='<h3>Result — maximum affordable rent</h3>'
+      +'<p>At the 30% rule (gross): <strong>'+money(gross*0.30)+'</strong> ('+money(gross)+' × 30%).</p>'
+      +'<p>At 2.5x (gross ÷ 2.5): <strong>'+money(gross/2.5)+'</strong>.</p>'
+      +'<p>At 3x (gross ÷ 3): <strong>'+money(gross/3)+'</strong>.</p>';
+    if(!isNaN(net)&&net>0){ html+='<p>At the 30% rule (net, stricter cash view): <strong>'+money(net*0.30)+'</strong> ('+money(net)+' × 30%).</p>'; }
+    if(!isNaN(rent)&&rent>0){
+      var ratio=rent/gross*100;
+      html+='<h3>Rent check</h3><p>'+money(rent)+' is <strong>'+ratio.toFixed(1)+'%</strong> of gross income — '+(ratio<=30?'within':'above')+' the 30% rule; it '+(rent<=gross/3?'meets':'exceeds')+' the 3x maximum and '+(rent<=gross/2.5?'meets':'exceeds')+' the 2.5x maximum.</p>';
+    }
+    err.hidden=true; out.hidden=false; out.innerHTML=html;
+  }
+  form.addEventListener('submit',function(e){e.preventDefault();calc();});
+})();
+</script>
+
+<script>
+(function(){
+  var dropdowns=document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function(dd){
+    var btn=dd.querySelector(".dropbtn");
+    if(!btn) return;
+    var clickOpened=false;
+    function openMenu(){dd.classList.add("open");btn.setAttribute("aria-expanded","true");}
+    function closeMenu(){dd.classList.remove("open");btn.setAttribute("aria-expanded","false");clickOpened=false;}
+    btn.addEventListener("click",function(e){
+      e.stopPropagation();
+      if(clickOpened){closeMenu();}
+      else {
+        dropdowns.forEach(function(o){if(o!==dd){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");}});
+        clickOpened=true; openMenu();
+      }
+    });
+    dd.addEventListener("mouseenter",function(){openMenu();});
+    dd.addEventListener("mouseleave",function(){if(!clickOpened){closeMenu();}});
+    dd.addEventListener("focusin",function(){openMenu();});
+    dd.addEventListener("focusout",function(e){
+      if(!dd.contains(e.relatedTarget) && !clickOpened){closeMenu();}
+    });
+    dd.addEventListener("keydown",function(e){
+      if(e.key==="Escape"){closeMenu();btn.focus();}
+    });
+  });
+  document.addEventListener("click",function(){
+    dropdowns.forEach(function(o){o.classList.remove("open");o.querySelector(".dropbtn").setAttribute("aria-expanded","false");});
+  });
+})();
+</script>
+
+</body>
+</html>
