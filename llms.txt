@@ -17,6 +17,10 @@
 
 - Prorated rent: actual-days = rent / days in the month x days occupied; 30-day = rent / 30 x days occupied; 365-day = rent x 12 / 365 x days occupied. The method in the lease is the one that matters for a tenancy. No single federal rule prescribes a prorating method.
 - California rent cap: AB 1482, Civil Code section 1947.12 - maximum increase min(5% + local CPI, 10%) per 12 months, for covered properties only.
+- California county rent caps, increases starting 1 August 2026 to 31 July 2027 (Attorney General area groups, no per-county table): Los Angeles Area 8.7% (Los Angeles, Orange), Riverside Area 8.1% (Riverside, San Bernardino), San Diego Area 8.2% (San Diego), San Francisco Area 8.8% (Alameda, Contra Costa, Marin, San Francisco, San Mateo), All Other Counties 8.6% (the other 48 counties, including Sacramento). Formula min(5% + area-group CPI, 10%).
+- Washington rent cap by year: 2026: 9.683% (1 January 2026 to 31 December 2026); 2027: 10% (1 January 2027 to 31 December 2027; June CPI change 4.53%, 7% + 4.53% = 11.53% capped at 10%). Formula min(7% + CPI, 10%), no increase in the first 12 months.
+- Oregon rent cap (ORS 90.323), general tenancies: 2026: 9.5%; 2027: 10%. Manufactured dwelling and marina facilities with more than 30 spaces are 6% in 2027 and return Check official source in the site checkers.
+- Texas: no statewide rent increase cap. Texas Property Code Chapter 92 covers deposits, not a rent cap.
 - Washington rent cap: HB 1217, RCW 59.18.700 - no rent increase during the first 12 months after tenancy begins; after that, maximum increase min(7% + CPI, 10%), with exemptions in RCW 59.18.710.
 - California security deposit: AB 12, Civil Code section 1950.5 - generally 1 month's rent, with a small-landlord exception up to 2 months as defined in the statute; return generally within 21 calendar days after vacating, with an itemized statement for deductions. AB 2801 photo documentation rule applies as stated on the site.
 - Texas security deposit: Property Code sections 92.103 and 92.107 - no statutory cap on the amount (the lease controls); return within 30 days, with the duty triggered by a written forwarding address.
@@ -39,7 +43,7 @@
 - Coverage, exemptions, notice rules, and definitions are state- and city-specific. The site does not assert rules for states outside California, Washington, Oregon, and Texas.
 - Calculator results depend on the figures entered. The method in the lease controls where a lease method and a calculator method differ.
 
-## Tools (14)
+## Tools (16)
 
 - Free Tools Hub: https://www.usrenttools.com/tools/
 - Prorated Rent Calculator: https://www.usrenttools.com/tools/prorated-rent-calculator.html
@@ -56,6 +60,8 @@
 - Rent Affordability Calculator: https://www.usrenttools.com/tools/rent-affordability-calculator.html
 - Net Effective Rent Calculator: https://www.usrenttools.com/tools/net-effective-rent-calculator.html
 - Rent Increase Percentage Calculator: https://www.usrenttools.com/tools/rent-increase-percentage-calculator.html
+- California County Rent Cap Calculator: https://www.usrenttools.com/tools/california-county-rent-cap-calculator.html
+- Rent Increase Legality Checker: https://www.usrenttools.com/tools/rent-increase-legality-checker.html
 
 ## Guides (20)
 
