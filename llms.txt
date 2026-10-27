@@ -4,15 +4,14 @@
 
 ## About
 
-- Site: https://www.usrenttools.com/
+- [Site](https://www.usrenttools.com/)
 - Purpose: Help renters and small landlords answer, in one place, how much rent is owed for a partial month, how much rent can be increased, how much security deposit can be charged, and when a deposit must be returned, under the state rules the site verifies.
 - Model: Static HTML, CSS, and JavaScript. Calculators run in the browser. No account is required and no user data is sent to a server by the tools.
 - Last verified: 2026-10-25
 - Verified-rules scope: Only the rules listed below are asserted on this site. For every other state, city, or topic, the site's answer is "Check official source" for your city and state.
-- Methodology: https://www.usrenttools.com/pages/methodology.html
-- Editorial policy: https://www.usrenttools.com/pages/editorial-policy.html
-- About: https://www.usrenttools.com/pages/about.html
-
+- [Methodology](https://www.usrenttools.com/pages/methodology.html)
+- [Editorial policy](https://www.usrenttools.com/pages/editorial-policy.html)
+- [About](https://www.usrenttools.com/pages/about.html)
 ## Verified rules (summary)
 
 - Prorated rent: actual-days = rent / days in the month x days occupied; 30-day = rent / 30 x days occupied; 365-day = rent x 12 / 365 x days occupied. The method in the lease is the one that matters for a tenancy. No single federal rule prescribes a prorating method.
@@ -45,62 +44,59 @@
 
 ## Tools (16)
 
-- Free Tools Hub: https://www.usrenttools.com/tools/
-- Prorated Rent Calculator: https://www.usrenttools.com/tools/prorated-rent-calculator.html
-- Rent Increase Cap Checker: https://www.usrenttools.com/tools/rent-increase-cap-checker.html
-- Security Deposit Calculator: https://www.usrenttools.com/tools/security-deposit-calculator.html
-- Late Fee Checker: https://www.usrenttools.com/tools/late-fee-checker.html
-- Move-in Cost Calculator: https://www.usrenttools.com/tools/move-in-cost-calculator.html
-- Lease Renewal Comparator: https://www.usrenttools.com/tools/lease-renewal-comparator.html
-- 3x Rent Calculator: https://www.usrenttools.com/tools/three-times-rent-calculator.html
-- Mid-Term Rental Calculator: https://www.usrenttools.com/tools/mid-term-rental-calculator.html
-- Quarterly Rent Calculator: https://www.usrenttools.com/tools/quarterly-rent-calculator.html
-- Rent Compare Calculator: https://www.usrenttools.com/tools/rent-compare-calculator.html
-- Rent per Square Foot Calculator: https://www.usrenttools.com/tools/rent-per-square-foot-calculator.html
-- Rent Affordability Calculator: https://www.usrenttools.com/tools/rent-affordability-calculator.html
-- Net Effective Rent Calculator: https://www.usrenttools.com/tools/net-effective-rent-calculator.html
-- Rent Increase Percentage Calculator: https://www.usrenttools.com/tools/rent-increase-percentage-calculator.html
-- California County Rent Cap Calculator: https://www.usrenttools.com/tools/california-county-rent-cap-calculator.html
-- Rent Increase Legality Checker: https://www.usrenttools.com/tools/rent-increase-legality-checker.html
-
+- [Free Tools Hub](https://www.usrenttools.com/tools/)
+- [Prorated Rent Calculator](https://www.usrenttools.com/tools/prorated-rent-calculator.html)
+- [Rent Increase Cap Checker](https://www.usrenttools.com/tools/rent-increase-cap-checker.html)
+- [Security Deposit Calculator](https://www.usrenttools.com/tools/security-deposit-calculator.html)
+- [Late Fee Checker](https://www.usrenttools.com/tools/late-fee-checker.html)
+- [Move-in Cost Calculator](https://www.usrenttools.com/tools/move-in-cost-calculator.html)
+- [Lease Renewal Comparator](https://www.usrenttools.com/tools/lease-renewal-comparator.html)
+- [3x Rent Calculator](https://www.usrenttools.com/tools/three-times-rent-calculator.html)
+- [Mid-Term Rental Calculator](https://www.usrenttools.com/tools/mid-term-rental-calculator.html)
+- [Quarterly Rent Calculator](https://www.usrenttools.com/tools/quarterly-rent-calculator.html)
+- [Rent Compare Calculator](https://www.usrenttools.com/tools/rent-compare-calculator.html)
+- [Rent per Square Foot Calculator](https://www.usrenttools.com/tools/rent-per-square-foot-calculator.html)
+- [Rent Affordability Calculator](https://www.usrenttools.com/tools/rent-affordability-calculator.html)
+- [Net Effective Rent Calculator](https://www.usrenttools.com/tools/net-effective-rent-calculator.html)
+- [Rent Increase Percentage Calculator](https://www.usrenttools.com/tools/rent-increase-percentage-calculator.html)
+- [California County Rent Cap Calculator](https://www.usrenttools.com/tools/california-county-rent-cap-calculator.html)
+- [Rent Increase Legality Checker](https://www.usrenttools.com/tools/rent-increase-legality-checker.html)
 ## Guides (20)
 
-- Guides Hub: https://www.usrenttools.com/guides/
-- Rent Rules Explained: https://www.usrenttools.com/guides/rent-rules-explained.html
-- How to Calculate Prorated Rent: https://www.usrenttools.com/guides/how-to-calculate-prorated-rent.html
-- 30-Day vs Actual-Days Proration: https://www.usrenttools.com/guides/30-day-vs-actual-days-proration.html
-- How to Split Prorated Rent With Roommates: https://www.usrenttools.com/guides/how-to-split-prorated-rent-with-roommates.html
-- Prorated Rent When Breaking a Lease Early: https://www.usrenttools.com/guides/prorated-rent-when-breaking-lease-early.html
-- Is My Rent Increase Legal?: https://www.usrenttools.com/guides/is-my-rent-increase-legal.html
-- Washington Rent Cap: https://www.usrenttools.com/guides/washington-rent-cap.html
-- How Much Security Deposit Can a Landlord Charge?: https://www.usrenttools.com/guides/how-much-security-deposit-can-landlord-charge.html
-- California Security Deposit Refund: https://www.usrenttools.com/guides/california-security-deposit-refund.html
-- California Missed Security Deposit Deadline: https://www.usrenttools.com/guides/california-missed-security-deposit-deadline.html
-- Texas Security Deposit Deadline: https://www.usrenttools.com/guides/texas-security-deposit-deadline.html
-- Security Deposit Return Deadline: https://www.usrenttools.com/guides/security-deposit-return-deadline.html
-- Late Fee Grace Period: https://www.usrenttools.com/guides/late-fee-grace-period.html
-- Oregon Late Fee: https://www.usrenttools.com/guides/oregon-late-fee.html
-- 3x Rent Rule Explained: https://www.usrenttools.com/guides/three-times-rent-rule-explained.html
-- Rent Affordability and the 30% Rule: https://www.usrenttools.com/guides/rent-affordability-30-percent-rule.html
-- Mid-Term vs Short-Term vs Long-Term Rentals: https://www.usrenttools.com/guides/mid-term-vs-short-term-vs-long-term-rentals.html
-- Rent per Square Foot Explained: https://www.usrenttools.com/guides/rent-per-square-foot-explained.html
-- Net Effective Rent vs Gross Rent: https://www.usrenttools.com/guides/net-effective-rent-vs-gross-rent.html
-- First and Last Month's Rent Explained: https://www.usrenttools.com/guides/first-and-last-month-rent-explained.html
-
+- [Guides Hub](https://www.usrenttools.com/guides/)
+- [Rent Rules Explained](https://www.usrenttools.com/guides/rent-rules-explained.html)
+- [How to Calculate Prorated Rent](https://www.usrenttools.com/guides/how-to-calculate-prorated-rent.html)
+- [30-Day vs Actual-Days Proration](https://www.usrenttools.com/guides/30-day-vs-actual-days-proration.html)
+- [How to Split Prorated Rent With Roommates](https://www.usrenttools.com/guides/how-to-split-prorated-rent-with-roommates.html)
+- [Prorated Rent When Breaking a Lease Early](https://www.usrenttools.com/guides/prorated-rent-when-breaking-lease-early.html)
+- [Is My Rent Increase Legal?](https://www.usrenttools.com/guides/is-my-rent-increase-legal.html)
+- [Washington Rent Cap](https://www.usrenttools.com/guides/washington-rent-cap.html)
+- [How Much Security Deposit Can a Landlord Charge?](https://www.usrenttools.com/guides/how-much-security-deposit-can-landlord-charge.html)
+- [California Security Deposit Refund](https://www.usrenttools.com/guides/california-security-deposit-refund.html)
+- [California Missed Security Deposit Deadline](https://www.usrenttools.com/guides/california-missed-security-deposit-deadline.html)
+- [Texas Security Deposit Deadline](https://www.usrenttools.com/guides/texas-security-deposit-deadline.html)
+- [Security Deposit Return Deadline](https://www.usrenttools.com/guides/security-deposit-return-deadline.html)
+- [Late Fee Grace Period](https://www.usrenttools.com/guides/late-fee-grace-period.html)
+- [Oregon Late Fee](https://www.usrenttools.com/guides/oregon-late-fee.html)
+- [3x Rent Rule Explained](https://www.usrenttools.com/guides/three-times-rent-rule-explained.html)
+- [Rent Affordability and the 30% Rule](https://www.usrenttools.com/guides/rent-affordability-30-percent-rule.html)
+- [Mid-Term vs Short-Term vs Long-Term Rentals](https://www.usrenttools.com/guides/mid-term-vs-short-term-vs-long-term-rentals.html)
+- [Rent per Square Foot Explained](https://www.usrenttools.com/guides/rent-per-square-foot-explained.html)
+- [Net Effective Rent vs Gross Rent](https://www.usrenttools.com/guides/net-effective-rent-vs-gross-rent.html)
+- [First and Last Month's Rent Explained](https://www.usrenttools.com/guides/first-and-last-month-rent-explained.html)
 ## Other pages
 
-- HTML Sitemap: https://www.usrenttools.com/pages/sitemap.html
-- Contact Support: https://www.usrenttools.com/pages/contact.html
-- Privacy Policy: https://www.usrenttools.com/pages/privacy.html
-- Terms of Service: https://www.usrenttools.com/pages/terms.html
-- Legal Disclaimer: https://www.usrenttools.com/pages/disclaimer.html
-- Cookie Protocol: https://www.usrenttools.com/pages/cookie-policy.html
-- Accessibility: https://www.usrenttools.com/pages/accessibility.html
-
+- [HTML Sitemap](https://www.usrenttools.com/pages/sitemap.html)
+- [Contact Support](https://www.usrenttools.com/pages/contact.html)
+- [Privacy Policy](https://www.usrenttools.com/pages/privacy.html)
+- [Terms of Service](https://www.usrenttools.com/pages/terms.html)
+- [Legal Disclaimer](https://www.usrenttools.com/pages/disclaimer.html)
+- [Cookie Protocol](https://www.usrenttools.com/pages/cookie-policy.html)
+- [Accessibility](https://www.usrenttools.com/pages/accessibility.html)
 ## Official sources
 
-- Washington Legislature, RCW 59.18.700: https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.700
-- California Legislative Information, Civil Code 1947.12: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV
-- California Legislative Information, Civil Code 1950.5: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1950.5.&lawCode=CIV
-- Oregon Legislature, ORS Chapter 90 (includes 90.260): https://www.oregonlegislature.gov/bills_laws/ors/ors090.html
-- Texas Legislature, Property Code Chapter 92 (sections 92.103 and 92.107): https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm
+- [Washington Legislature, RCW 59.18.700](https://app.leg.wa.gov/rcw/default.aspx?cite=59.18.700)
+- [California Legislative Information, Civil Code 1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV)
+- [California Legislative Information, Civil Code 1950.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1950.5.&lawCode=CIV)
+- [Oregon Legislature, ORS Chapter 90 (includes 90.260)](https://www.oregonlegislature.gov/bills_laws/ors/ors090.html)
+- [Texas Legislature, Property Code Chapter 92 (sections 92.103 and 92.107)](https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm)
