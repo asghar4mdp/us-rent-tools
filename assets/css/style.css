@@ -91,3 +91,5 @@ footer.site small,footer.site .muted{color:#cbd5e1}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .brand{display:inline-flex;align-items:center}
 .brand img{height:34px;width:auto;display:block}
+
+.guide-image img{max-width:100%;height:auto;display:block}
