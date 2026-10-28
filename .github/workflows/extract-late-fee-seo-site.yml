@@ -32,7 +32,7 @@ jobs:
           test -f "$SRC/sitemap.xml"
           test -f "$SRC/google61c7f4d1d9549172.html"
           rm -rf assets guides pages tools index.html README.md robots.txt sitemap.xml vercel.json google61c7f4d1d9549172.html llms.txt
-          cp -a "$SRC"/.
+          cp -a "$SRC"/. ./
           rm -rf "$ZIP" .github
           test -f index.html
           test -f sitemap.xml
