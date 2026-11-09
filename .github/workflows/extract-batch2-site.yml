@@ -1,0 +1,39 @@
+name: Extract batch2 site zip
+
+on:
+  push:
+    paths:
+      - 'rent-tools-site-publish-batch2.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract site zip
+        env:
+          ZIP: rent-tools-site-publish-batch2.zip
+          GSC: google61c7f4d1d9549172.html
+        run: |
+          set -euo pipefail
+          test -f "$ZIP"
+          mkdir -p /tmp/protect /tmp/site
+          cp robots.txt "$GSC" llms.txt /tmp/protect/ 2>/dev/null || true
+          unzip -o -q "$ZIP" -d /tmp/site
+          rm -rf assets guides pages tools index.html README.md sitemap.xml llms.txt
+          cp -a /tmp/site/. .
+          cp -f /tmp/protect/robots.txt robots.txt
+          cp -f "/tmp/protect/$GSC" "$GSC"
+          if [ ! -f llms.txt ]; then cp -f /tmp/protect/llms.txt llms.txt; fi
+          if [ -f guides/rental-score-explained.html ]; then echo "ERROR: rental-score guide must not be deployed" >&2; exit 1; fi
+          rm -rf "$ZIP" .github
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "Publish updated site: traffic batch 2 — 5 short-answer copy edits" || echo "nothing to commit"
+          git push
