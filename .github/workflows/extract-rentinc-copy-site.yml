@@ -1,0 +1,48 @@
+name: Extract rentinc copy site zip
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Extract site zip and publish
+        env:
+          ZIP: rent-tools-site-publish-rentinc-copy.zip
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -f "$ZIP" || { echo "ZIP not found: $ZIP"; ls -la; exit 1; }
+          mkdir -p /tmp/site-protect
+          cp robots.txt /tmp/site-protect/robots.txt
+          cp google61c7f4d1d9549172.html /tmp/site-protect/google61c7f4d1d9549172.html
+          cp llms.txt /tmp/site-protect/llms.txt
+          mkdir -p /tmp/site-src
+          unzip -o -q "$ZIP" -d /tmp/site-src
+          rm -rf assets guides pages tools index.html README.md sitemap.xml llms.txt
+          cp -a /tmp/site-src/. ./
+          mkdir -p .github/workflows
+          cp /tmp/site-protect/robots.txt robots.txt
+          cp /tmp/site-protect/google61c7f4d1d9549172.html google61c7f4d1d9549172.html
+          if [ ! -f llms.txt ]; then
+            cp /tmp/site-protect/llms.txt llms.txt
+          fi
+          rm -rf "$ZIP" .github
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Publish updated site: rent increase calculator copy"
+          git push origin main
