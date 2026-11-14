@@ -34,6 +34,7 @@
 - California rent cap example: $2,000 rent at 3% CPI is capped at $2,160 (8%).
 - Washington rent cap example: 7% + CPI capped at 10%; for example, 7% + 4% CPI = 11%, capped at 10%.
 - California deposit example: 1 month's rent as the general limit under AB 12.
+- Rent or sell: $400,000 home, $250,000 mortgage, 6% selling costs (example), $2,400 rent — selling now nets $126,000; renting it out for 5 years ends $75,966.88 ahead on those example figures.
 
 ## Limitations
 
@@ -42,7 +43,7 @@
 - Coverage, exemptions, notice rules, and definitions are state- and city-specific. The site does not assert rules for states outside California, Washington, Oregon, and Texas.
 - Calculator results depend on the figures entered. The method in the lease controls where a lease method and a calculator method differ.
 
-## Tools (16)
+## Tools (17)
 
 - [Free Tools Hub](https://www.usrenttools.com/tools/)
 - [Prorated Rent Calculator](https://www.usrenttools.com/tools/prorated-rent-calculator.html)
@@ -61,7 +62,8 @@
 - [Rent Increase Percentage Calculator](https://www.usrenttools.com/tools/rent-increase-percentage-calculator.html)
 - [California County Rent Cap Calculator](https://www.usrenttools.com/tools/california-county-rent-cap-calculator.html)
 - [Rent Increase Legality Checker](https://www.usrenttools.com/tools/rent-increase-legality-checker.html)
-## Guides (21)
+- [Rent or Sell Calculator](https://www.usrenttools.com/tools/rent-or-sell-calculator.html)
+## Guides (22)
 
 - [Guides Hub](https://www.usrenttools.com/guides/)
 - [Rent Rules Explained](https://www.usrenttools.com/guides/rent-rules-explained.html)
@@ -85,6 +87,7 @@
 - [Rent per Square Foot Explained](https://www.usrenttools.com/guides/rent-per-square-foot-explained.html)
 - [Net Effective Rent vs Gross Rent](https://www.usrenttools.com/guides/net-effective-rent-vs-gross-rent.html)
 - [First and Last Month's Rent Explained](https://www.usrenttools.com/guides/first-and-last-month-rent-explained.html)
+- [Rent or Sell Your Home?](https://www.usrenttools.com/guides/rent-or-sell-home-explained.html)
 ## Other pages
 
 - [HTML Sitemap](https://www.usrenttools.com/pages/sitemap.html)
