@@ -61,7 +61,7 @@
 - [Rent Increase Percentage Calculator](https://www.usrenttools.com/tools/rent-increase-percentage-calculator.html)
 - [California County Rent Cap Calculator](https://www.usrenttools.com/tools/california-county-rent-cap-calculator.html)
 - [Rent Increase Legality Checker](https://www.usrenttools.com/tools/rent-increase-legality-checker.html)
-## Guides (20)
+## Guides (21)
 
 - [Guides Hub](https://www.usrenttools.com/guides/)
 - [Rent Rules Explained](https://www.usrenttools.com/guides/rent-rules-explained.html)
@@ -79,6 +79,7 @@
 - [Late Fee Grace Period](https://www.usrenttools.com/guides/late-fee-grace-period.html)
 - [Oregon Late Fee](https://www.usrenttools.com/guides/oregon-late-fee.html)
 - [3x Rent Rule Explained](https://www.usrenttools.com/guides/three-times-rent-rule-explained.html)
+- [What Is a Rental Score?](https://www.usrenttools.com/guides/rental-score-explained.html)
 - [Rent Affordability and the 30% Rule](https://www.usrenttools.com/guides/rent-affordability-30-percent-rule.html)
 - [Mid-Term vs Short-Term vs Long-Term Rentals](https://www.usrenttools.com/guides/mid-term-vs-short-term-vs-long-term-rentals.html)
 - [Rent per Square Foot Explained](https://www.usrenttools.com/guides/rent-per-square-foot-explained.html)
