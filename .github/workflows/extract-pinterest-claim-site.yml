@@ -1,0 +1,37 @@
+name: Extract pinterest-claim site zip
+on:
+  push:
+    paths:
+      - rent-tools-site-publish-pinterest-claim.zip
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract zip, replacing site files (zip wins)
+        run: |
+          set -e
+          ZIP="rent-tools-site-publish-pinterest-claim.zip"
+          test -f "$ZIP"
+          mkdir -p /tmp/site-preserve
+          for f in robots.txt google61c7f4d1d9549172.html llms.txt; do
+            [ -f "$f" ] && cp -a "$f" /tmp/site-preserve/ || true
+          done
+          mkdir -p /tmp/site-new
+          unzip -o "$ZIP" -d /tmp/site-new
+          rm -rf assets guides pages tools index.html README.md sitemap.xml llms.txt
+          cp -a /tmp/site-new/. .
+          for f in robots.txt google61c7f4d1d9549172.html llms.txt; do
+            if [ ! -f "$f" ] && [ -f "/tmp/site-preserve/$f" ]; then cp -a "/tmp/site-preserve/$f" .; fi
+          done
+          rm -f "$ZIP"
+          rm -rf .github
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git status --short
+          if git diff --cached --quiet; then echo "No changes to commit"; else git commit -m "Publish updated site: Pinterest verification meta tag"; fi
+          git push
